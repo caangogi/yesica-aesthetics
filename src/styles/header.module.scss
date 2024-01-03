@@ -1,0 +1,36 @@
+.header{
+    height: 10vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    position: fixed;
+    padding-bottom: .5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(
+        90deg,
+        #CBB26A,
+        #cf9f4e,
+        #fdf1ae,
+        #cf9f4e,
+        #a47c3d
+      );
+      background-size: 200% 200%;
+      transition: background-position .5s linear; 
+      
+      &:hover {
+        background-position: 100% 100%; 
+      }
+}
+
+.header_container{
+    width: 100%;
+    background-color: #fff;
+}
+
+
+
+@media only screen and (max-width: 901px){
+    
+ }
