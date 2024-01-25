@@ -6,9 +6,12 @@ import AntiWrinkle from '@/components/home-components/AntiWrinkle'
 import CentralLogo from '@/components/home-components/CentralLogo'
 import HerbalGreenPeel from '@/components/home-components/HerbalGreenPeel'
 import IvDrip from '@/components/home-components/IvDrip'
+import Header from '@/components/headers/header'
 
 export default function Home() {
   return (
+    <>
+      <Header />
     <main className={styles.main}>
       <div className={styles.main_container}>
 
@@ -28,5 +31,6 @@ export default function Home() {
         <HerbalGreenPeel />
       </div>
     </main>
+    </>
   )
 }
