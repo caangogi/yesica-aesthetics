@@ -12,7 +12,7 @@ export default function AnimatedLink({ href, children, className }: Props) {
   const { animatedRoute } = useAnimatedRouter();
   return (
     <Link
-      href={href}
+      href={`${href}`}
       className={className}
       onClick={() => {
         animatedRoute(href);

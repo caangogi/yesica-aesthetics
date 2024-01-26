@@ -4,27 +4,30 @@ import AnimatedLink from '@/components/links/animatedLink';
 
 
 interface AnimateCardProps {
+  id: number;
   title: string;
   description: string;
   image: string;
   url: string;
 }
 
-const AnimateCard: React.FC<AnimateCardProps> = ({ title, description, image, url }) => {
-    return (
-      <AnimatedLink href={url} className={styles.AnimateCard}>
-        <div className={styles.link_card_container}
-          style={{
-            backgroundImage: `url(${image})`
-          }}
-        >
-          <div className={styles.text_container}>
-            <h1 className={styles.title}>{title}</h1>
-            <p className={styles.description}>{description}</p>
-          </div>
+const AnimateCard: React.FC<AnimateCardProps> = ({ id, title, description, image, url }) => {
+  return (
+    <AnimatedLink href={`${url}/?id=${id}`} className={styles.AnimateCard}>
+      <div className={styles.link_card_container}
+        style={{
+          backgroundImage: `url(${image})`,
+          viewTransitionName: `image-${url}`
+        }}
+      >
+        <div className={styles.text_container}>
+          <h1 className={styles.title}>{title}</h1>
+          <p className={styles.description}>{description}</p>
         </div>
-      </AnimatedLink>
-    );
-  };
-  
-  export default AnimateCard;
+      </div>
+    </AnimatedLink>
+  );
+};
+
+
+export default AnimateCard;

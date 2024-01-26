@@ -1,11 +1,10 @@
 .main {
     min-height: 100vh;
     background-color: #fcf8ec;
-    background-image: url('/images/link-cards/01.png');
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-  
+    transition: background-image 0.5s ease;
 }
 
 .main_container{

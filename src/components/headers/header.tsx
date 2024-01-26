@@ -5,7 +5,7 @@ import Image from 'next/image'
 import AnimatedLink from '../links/animatedLink'
 export default function Header() {
   return (
-    <div className={`${styles.header} header_transition`}>
+    <div className={`${styles.header}`}>
        <div className={styles.header_container}>
        <AnimatedLink
             href='/'

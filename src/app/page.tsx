@@ -1,38 +1,31 @@
-import styles from '@/styles/page.module.scss'
-import SurgicalCare from '@/components/home-components/SurgicalCare'
-import FacialTreatments from '@/components/home-components/FacialTreatments'
-import DermaFillers from '@/components/home-components/DermaFillers'
-import AntiWrinkle from '@/components/home-components/AntiWrinkle'
-import CentralLogo from '@/components/home-components/CentralLogo'
-import HerbalGreenPeel from '@/components/home-components/HerbalGreenPeel'
-import IvDrip from '@/components/home-components/IvDrip'
-import Header from '@/components/headers/header'
-import Link from 'next/link'
+"use client"
+import React, { useState } from 'react';
+import styles from '@/styles/services-page.module.scss';
+import { LinksHomeData } from '@/data/LinksHomeData';
+import AnimateCard from '@/components/home-components/AnimateCard';
+import Header from '@/components/headers/header';
 
-export default function Home() {
+export default function Index() {
+
   return (
-    <>
+    <main 
+      className={styles.main}  >
       <Header />
-    <main className={styles.main}>
+
       <div className={styles.main_container}>
-
-
-        <Link
-          href={'/services/surgical-care'}
-        >
-            <h1>Servcios</h1>
-        </Link>
-        
-      {/*   <SurgicalCare />
-        <DermaFillers />
-        <FacialTreatments />
-        <CentralLogo />
-        <AntiWrinkle />
-        <IvDrip />
-        <HerbalGreenPeel />
-         */}
+        <div className={styles.links_list_container}>
+          {LinksHomeData.map((link) => (
+            <AnimateCard
+              id={link.id}
+              key={link.id}
+              title={link.title}
+              description={link.description}
+              image={link.image}
+              url={link.url}
+            />
+          ))}
+        </div>
       </div>
     </main>
-    </>
-  )
+  );
 }

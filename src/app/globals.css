@@ -10,28 +10,10 @@ body {
   overflow-x: hidden;
 }
 
-body {
-
-}
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
-.header_transition{
-  view-transition-name: page-header;
-}
-
-::view-transition-old(page-header) {
-  transition: all ease-in-out 1s;
-}
-
-::view-transition-new(page-header) {
-  transition: all ease-in-out 1s;
-  background-color: black;
-}
-
 
 @media only screen and (max-width: 901px){
   h1{
