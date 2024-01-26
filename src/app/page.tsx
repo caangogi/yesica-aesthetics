@@ -1,5 +1,3 @@
-"use client"
-import React, { useState } from 'react';
 import styles from '@/styles/services-page.module.scss';
 import { LinksHomeData } from '@/data/LinksHomeData';
 import AnimateCard from '@/components/home-components/AnimateCard';
@@ -9,10 +7,10 @@ export default function Index() {
 
   return (
     <main 
-      className={styles.main}  >
+      className={`${styles.main}  ${styles.home}`}  >
       <Header />
 
-      <div className={styles.main_container}>
+      <div className={`${styles.main_container}`}>
         <div className={styles.links_list_container}>
           {LinksHomeData.map((link) => (
             <AnimateCard

@@ -1,6 +1,14 @@
+.home{
+  background-image: url('/images/logo.jpg');
+  background-size: contain !important;
+  background-position-y: 5vh;
+}
+
+
+// #fad7de
 .main {
     min-height: 100vh;
-    background-color: #fcf8ec;
+    background-color: #fff ;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -70,6 +78,15 @@
     }
 }
 
+
+.service_page{
+  border: 5px solid #a47c3d;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+
 @media only screen and (max-width: 901px){
 
   .main{
@@ -93,3 +110,4 @@
         }
     }
 }
+

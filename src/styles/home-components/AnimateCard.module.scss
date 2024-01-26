@@ -25,6 +25,7 @@
   }
   
   .text_container {
+    height: 8rem;
     padding: 12px;
     position: absolute;
     bottom: 0;
@@ -41,7 +42,26 @@
   
   .title{
     font-size: 18px;
+    height: 40px;
+    display: flex;
+    align-items: center;
     margin-bottom: 6px;
+    padding: .5rem;
+    color: #3a3a3a;
+    border-radius: 5px;
+      background-image: linear-gradient(
+        45deg,
+        #CBB26A,
+        #cf9f4e,
+        #fdf1ae,
+        #cf9f4e,
+        #a47c3d
+      );
+     
+    &:hover {
+      background-position: center; 
+    }
+    z-index: 5000;
   }
   
   .description{
@@ -57,12 +77,16 @@
     }
 
     .title{
-        font-size: 1rem;
+        font-size: .9rem;
         margin-bottom: 6px;
       }
       
       .description{
-        font-size: .8rem;
+        font-size: .7rem;
         color: #000;
       }
+
+    .text_container{
+      height: 7rem;
+    }
   }

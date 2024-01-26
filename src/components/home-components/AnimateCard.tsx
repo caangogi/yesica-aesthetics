@@ -13,7 +13,7 @@ interface AnimateCardProps {
 
 const AnimateCard: React.FC<AnimateCardProps> = ({ id, title, description, image, url }) => {
   return (
-    <AnimatedLink href={`${url}/?id=${id}`} className={styles.AnimateCard}>
+    <AnimatedLink href={`${url}`} className={styles.AnimateCard}>
       <div className={styles.link_card_container}
         style={{
           backgroundImage: `url(${image})`,
