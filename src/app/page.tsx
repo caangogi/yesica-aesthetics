@@ -17,18 +17,13 @@ export default function Home() {
 
         
         <SurgicalCare />
-       
-
         <DermaFillers />
         <FacialTreatments />
-
-
         <CentralLogo />
-
-
         <AntiWrinkle />
         <IvDrip />
         <HerbalGreenPeel />
+        
       </div>
     </main>
     </>
