@@ -7,6 +7,7 @@ import CentralLogo from '@/components/home-components/CentralLogo'
 import HerbalGreenPeel from '@/components/home-components/HerbalGreenPeel'
 import IvDrip from '@/components/home-components/IvDrip'
 import Header from '@/components/headers/header'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -15,15 +16,21 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.main_container}>
 
+
+        <Link
+          href={'/services/surgical-care'}
+        >
+            <h1>Servcios</h1>
+        </Link>
         
-        <SurgicalCare />
+      {/*   <SurgicalCare />
         <DermaFillers />
         <FacialTreatments />
         <CentralLogo />
         <AntiWrinkle />
         <IvDrip />
         <HerbalGreenPeel />
-        
+         */}
       </div>
     </main>
     </>
