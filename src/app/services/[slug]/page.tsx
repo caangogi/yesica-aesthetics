@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'; 
 import styles from '@/styles/services-page.module.scss';
 import Header from '@/components/headers/header';
+import { LinksHomeData } from '@/data/LinksHomeData';
 
 interface AnimateCardProps {
   id: number;
@@ -22,43 +23,25 @@ export default function ServicePage({
   const [itemData, setItemData] = useState<AnimateCardProps | null>(null);
   const [error, setError] = useState('');
 
-  console.log(params.slug)
-
- /*  console.log(params.slug) */
-
-  useEffect(() => {
-    const fetchItem = async () => {
-      try {
-        const response = await axios.get(`/api/get-item/?${params.slug}`);
-        console.log(response)
-        setItemData(response.data.linksHomeData);
-      } catch (err) {
-        
-        setError('Error al obtener datos');
-        console.error(err);
-      }
-    };
-
-    fetchItem();
-  }, [params.slug]);
+ useEffect(() => {
+  const fetchItem = async () => {
+    let filteredData = LinksHomeData;
+    filteredData = LinksHomeData.filter((item) => item.url.includes(params.slug));
+    setItemData(filteredData[0])
+  };
+  fetchItem();
+}, [params.slug]);
 
   return (
     <main className={styles.main}>
       <Header />
       <div  
-        className={styles.service_page}>
-          <div
-            className={styles.main_container_item_left}
-          >
-
-              <h1>Lefth</h1>
-          </div>
-          <div
-            className={styles.main_container_item_right}
-          >
-
-            <h1>side right</h1>
-          </div>
+        className={styles.service_page}
+        style={{
+          backgroundImage: `url(${itemData?.image})`,
+          viewTransitionName: `image-${itemData?.id}`
+        }}
+        >
       </div>
     </main>
   );

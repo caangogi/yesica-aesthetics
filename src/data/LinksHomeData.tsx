@@ -42,7 +42,7 @@ export const LinksHomeData = [
     },
     {
         id: 5,
-        title: 'IV - DRIP',
+        title: 'IV DRIP',
         description: 'Tratamientos intravenosos para reponer vitaminas y minerales.',
         pageDescription: 'Hidratación profunda y nutrición óptima para revitalizar el cuerpo.',
         image: '/images/link-cards/06.png',
