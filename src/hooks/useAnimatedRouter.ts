@@ -19,7 +19,7 @@ export default function useAnimatedRouter() {
       return router.push(url);
     } else {
       extendedDocument.startViewTransition(() => {
-        router.push(url);
+       /*  router.push(url); */
       });
     }
   };
