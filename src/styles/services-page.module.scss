@@ -80,10 +80,12 @@
 
 
 .service_page{
-  border: 5px solid #a47c3d;
   height: 100vh;
   width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
+
 
 
 
@@ -93,6 +95,7 @@
     background-size: 150%;
     background-position-y: 10vh;
     background-position-x: 50%;
+
     }
 
   .main_container{
@@ -108,6 +111,11 @@
         & > a {
         padding: .2rem;
         }
+    }
+
+    .service_page{
+      background-size: contain;
+      background-position-y: 10vh;
     }
 }
 
