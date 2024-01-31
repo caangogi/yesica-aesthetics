@@ -16,11 +16,16 @@ const AnimateCard: React.FC<AnimateCardProps> = ({ id, title, description, image
     <AnimatedLink href={`${url}`} className={styles.AnimateCard}>
       <div className={styles.link_card_container}
         style={{
-          backgroundImage: `url(${image})`,
-          viewTransitionName: `image-${id}`
+          backgroundImage:`url(${image})`,
+          viewTransitionName:`image-${id}`
         }}
       >
-        <div className={styles.text_container}>
+        <div 
+          className={styles.text_container}
+          style={{
+            viewTransitionName: `text-${id}`
+          }}
+        >
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.description}>{description}</p>
         </div>

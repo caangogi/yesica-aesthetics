@@ -1,4 +1,4 @@
-import styles from '@/styles/services-page.module.scss';
+import styles from '@/styles/page.module.scss';
 import { LinksHomeData } from '@/data/LinksHomeData';
 import AnimateCard from '@/components/home-components/AnimateCard';
 import Header from '@/components/headers/header';
@@ -10,8 +10,16 @@ export default function Index() {
       className={`${styles.main}  ${styles.home}`}  >
       <Header />
 
-      <div className={`${styles.main_container}`}>
-        <div className={styles.links_list_container}>
+      <div 
+        className={`${styles.main_container}`}
+        style={{
+          viewTransitionName: 'main_container'
+        }}
+      >
+        <div 
+          className={styles.links_list_container}
+         
+        >
           {LinksHomeData.map((link) => (
             <AnimateCard
               id={link.id}

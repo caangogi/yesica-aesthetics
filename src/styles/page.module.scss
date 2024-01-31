@@ -1,63 +1,79 @@
 .main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url('../assets/images/link-cards/22.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    background-position-x: calc(-10vw);
+  min-height: 100vh;
+  background-color: #fff ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: background-image 0.5s ease;
+}
+.home{
+background-image: url('/images/logo.jpg');
+background-size: contain !important;
+background-position-y: 5vh;
 }
 
 .main_container{
-  /* display: grid;
-
-  grid-template-columns: repeat(3, 1fr); */
- /*  grid-template-rows: repeat(4, 1fr); */
-  display: flex;
-
-  height: 35vh;
-  width: 40vw !important;
-  row-gap: 8px;
-  column-gap: 12px;
-  width: 80vw;
-  color: #858080;
-  position: absolute;
-  bottom: 10vh;
-  right: 0;
+  height: fit-content;
+  width: 50vw;
   overflow-x: scroll;
-  & > a {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    background-color: #fff;
-    transition: .5s all;
-    padding: .3rem;
-    background-image: linear-gradient(
-      180deg,
+  position: fixed;
+  bottom: 2rem;
+  right: 0;
+  padding-bottom: .5rem;
+
+  &::-webkit-scrollbar {
+      width: 10px;
+      background-color: transparent; 
+      height: 7px;
+      cursor: pointer;
+  }
+  &::-webkit-scrollbar-thumb {
+      background-image: linear-gradient(
+      45deg,
       #CBB26A,
       #cf9f4e,
       #fdf1ae,
       #cf9f4e,
       #a47c3d
-    );
-    background-size: 200% 200%;
-    transition: background-position .5s linear; 
-    
-    &:hover {
-      background-position: 100% 100%; 
-    }
+      );  
+      border-radius: 10px;
+      height: 5px;
+      cursor: pointer;
   }
+  &::-webkit-scrollbar-track {
+      background-color: transparent;  
+  }
+}
 
-  &::-webkit-scrollbar {
-    display: none;
+.links_list_container {
+  display: flex;
+  height: 350px;
+  width: max-content;
+  gap: 1rem;
+  & > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background-color: #fff;
+      transition: .5s all;
+      padding: .3rem;
+      background-image: linear-gradient(
+        180deg,
+        #CBB26A,
+        #cf9f4e,
+        #fdf1ae,
+        #cf9f4e,
+        #a47c3d
+      );
+      background-size: 200% 200%;
+      transition: background-position .5s linear; 
+      &:hover {
+          background-position: 100% 100%; 
+      }
+  }
 }
- 
-}
+
 
 @media only screen and (max-width: 901px){
 
@@ -74,5 +90,9 @@
     & > a{
       padding: .2rem;
     }
+  }
+
+  .links_list_container{
+    height: auto;
   }
 }
