@@ -22,9 +22,6 @@ const AnimateCard: React.FC<AnimateCardProps> = ({ id, title, description, image
       >
         <div 
           className={styles.text_container}
-          style={{
-            viewTransitionName: `text-${id}`
-          }}
         >
           <h1 className={styles.title}>{title}</h1>
           <p className={styles.description}>{description}</p>

@@ -24,10 +24,10 @@ export default function useAnimatedRouter() {
     try {
       if (extendedDocument.startViewTransition) {
         extendedDocument.startViewTransition(() => {
-          router.push(url);
+         /*  router.push(url); */
         });
       } else {
-        await router.push(url);
+        router.push(url);
       }
     } catch (error) {
       console.error("Error navigating:", error);

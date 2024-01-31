@@ -12,9 +12,6 @@ export default function Index() {
 
       <div 
         className={`${styles.main_container}`}
-        style={{
-          viewTransitionName: 'main_container'
-        }}
       >
         <div 
           className={styles.links_list_container}

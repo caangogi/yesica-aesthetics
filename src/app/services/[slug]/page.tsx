@@ -5,6 +5,7 @@ import styles from '@/styles/services-page.module.scss';
 import Header from '@/components/headers/header';
 import { LinksHomeData } from '@/data/LinksHomeData';
 import AnimateCard from '@/components/home-components/AnimateCard';
+import { Parallax } from 'react-parallax'; 
 
 interface AnimateCardProps {
   id: number;
@@ -46,54 +47,40 @@ export default function ServicePage({
   linksHomeData();
 }, [params.slug]);
 
-  return (
-    <main className={styles.main}>
-      <Header />
-      <div  
-        className={styles.service_page}
-        style={{
-          backgroundImage: `url(${itemData?.image})`,
-          viewTransitionName: `image-${itemData?.id}`
-        }}
-        >
+  
+return (
+  <>
+  <main className={styles.main}>
+    <Header />
+    <div 
+      className={styles.service_page} 
+      style={{ 
+        backgroundImage: `url(${itemData?.image})`,
+        viewTransitionName: `image-${itemData?.id}` 
+      }}
 
-        <div 
-          className={styles.text_container}
-          style={{
-            viewTransitionName: `text-${itemData?.id}`
-          }}
-        >
-          <h1 className={styles.title}> {itemData?.title}</h1>
-          <p className={styles.description}>{itemData?.description}</p>
-        </div>
-
-        <div 
-          className={styles.service_page_main_container}
-          style={{
-            viewTransitionName: 'main_container'
-          }}
-        >
-          <div 
-            className={styles.service_page_links_container}
-           
-          >
-            {linksHomeData?.map((link) => {
-              return(
-                <AnimateCard 
-                  key={link.id}
-                  id={link.id}
-                  image={link.image}
-                  title={link.title}
-                  description={link.description}
-                  url={link.url}
-                />
-              )
-            })}
-          </div>
-        </div>
-
-
+    >
+      <div className={styles.text_container}>
+        <h1 className={styles.title}>{itemData?.title}</h1>
+        <p className={styles.description}>{itemData?.description}</p>
       </div>
-    </main>
-  );
+
+      <div className={styles.service_page_main_container}>
+        <div className={styles.service_page_links_container}>
+          {linksHomeData?.map((link) => (
+            <AnimateCard
+              key={link.id}
+              id={link.id}
+              image={link.image}
+              title={link.title}
+              description={link.description}
+              url={link.url}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  </main>
+  </>
+);
 }

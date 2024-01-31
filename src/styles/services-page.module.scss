@@ -18,7 +18,7 @@
   width: 50vw;
   overflow-x: scroll;
   position: fixed;
-  bottom: 2rem;
+  bottom: 0;
   right: 0;
   padding-bottom: .5rem;
 
@@ -51,8 +51,7 @@
   width: max-content;
   gap: 1rem;
   height: 350px;
-  border: px solid #CBB26A;
-  bottom: 2rem;
+  bottom: 0;
 
   & > a {
       display: flex;
@@ -100,29 +99,18 @@
 }
 
 .title{
-    color: #3a3a3a;
-    font-size: 5rem;
+  color: #2e2e2e;
+  font-size: 5rem;
+  border-radius: .5rem;
+  padding: .2rem;
 }
 
 .description{
   font-size: 1.5rem;
+  padding: .2rem;
+
 }
 
-@keyframes fade-in {
-  from { opacity: 0; }
-}
-
-@keyframes fade-out {
-  to { opacity: 0; }
-}
-
-@keyframes slide-from-right {
-  from { transform: translateX(30px); }
-}
-
-@keyframes slide-to-left {
-  to { transform: translateX(-30px); }
-}
 
  @media only screen and (max-width: 901px){
 
