@@ -54,6 +54,10 @@ return (
     <Header />
     <div 
       className={styles.service_page} 
+      style={{ 
+        backgroundImage: `url(${itemData?.image})`,
+      }}
+
     >
       <div className={styles.text_container}>
         <h1 className={styles.title}>{itemData?.title}</h1>

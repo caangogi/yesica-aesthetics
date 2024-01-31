@@ -15,6 +15,9 @@ const AnimateCard: React.FC<AnimateCardProps> = ({ id, title, description, image
   return (
     <AnimatedLink href={`${url}`} className={styles.AnimateCard}>
       <div className={styles.link_card_container}
+        style={{
+          backgroundImage:`url(${image})`,
+        }}
       >
         <div 
           className={styles.text_container}
