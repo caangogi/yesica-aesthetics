@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '@/styles/home-components/AnimateCard.module.scss';
-import AnimatedLink from '@/components/links/animatedLink';
+/* import AnimatedLink from '@/components/links/animatedLink'; */
+import Link from 'next/link';
 
 interface AnimateCardProps {
   id: number;
@@ -12,7 +13,7 @@ interface AnimateCardProps {
 
 const AnimateCard: React.FC<AnimateCardProps> = ({ id, title, description, image, url }) => {
   return (
-    <AnimatedLink href={`${url}`} className={styles.AnimateCard}>
+    <Link href={`${url}`} className={styles.AnimateCard}>
       <div className={styles.link_card_container}
         style={{
           backgroundImage:`url(${image})`,
@@ -25,7 +26,7 @@ const AnimateCard: React.FC<AnimateCardProps> = ({ id, title, description, image
           <p className={styles.description}>{description}</p>
         </div>
       </div>
-    </AnimatedLink>
+    </Link>
   );
 };
 
