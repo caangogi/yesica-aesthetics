@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Poor+Story&display=swap');
 
 * {
   box-sizing: border-box;
@@ -19,7 +19,7 @@ a {
 }
 
 h1{
-  font-family: 'Caveat', cursive;
+  font-family: 'Poor Story', system-ui;
 }
 
 

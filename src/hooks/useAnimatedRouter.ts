@@ -24,7 +24,7 @@ export default function useAnimatedRouter() {
     try {
       if (extendedDocument.startViewTransition) {
         extendedDocument.startViewTransition(() => {
-         /*  router.push(url); */
+          router.push(url);
         });
       } else {
         router.push(url);

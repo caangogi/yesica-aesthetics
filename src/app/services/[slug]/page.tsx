@@ -7,6 +7,8 @@ import { LinksHomeData } from '@/data/LinksHomeData';
 import AnimateCard from '@/components/home-components/AnimateCard';
 import { Parallax } from 'react-parallax'; 
 
+import { motion } from 'framer-motion';
+
 interface AnimateCardProps {
   id: number;
   title: string;
@@ -52,19 +54,27 @@ return (
   <>
   <main className={styles.main}>
     <Header />
-    <div 
+    <motion.div 
       className={styles.service_page} 
       style={{ 
         backgroundImage: `url(${itemData?.image})`,
       }}
+      initial={{ y: 20, opacity:0}}
+      animate={{ y:0, opacity: 1}}
+      transition={{ease: 'easeInOut', duration: 0.75}}
 
     >
-      <div className={styles.text_container}>
+      <motion.div 
+        className={styles.text_container}
+        initial={{ x: 40, opacity:0}}
+        animate={{ x:0, opacity: 1}}
+        transition={{ease: 'easeInOut', duration: 0.5}}
+      >
         <h1 className={styles.title}>{itemData?.title}</h1>
         <p className={styles.description}>{itemData?.description}</p>
-      </div>
+      </motion.div>
 
-      <div className={styles.service_page_main_container}>
+    {/*   <div className={styles.service_page_main_container}>
         <div className={styles.service_page_links_container}>
           {linksHomeData?.map((link) => (
             <AnimateCard
@@ -77,8 +87,8 @@ return (
             />
           ))}
         </div>
-      </div>
-    </div>
+      </div> */}
+    </motion.div>
 
     
   </main>

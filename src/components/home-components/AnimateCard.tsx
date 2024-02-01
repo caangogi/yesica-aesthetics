@@ -2,7 +2,6 @@ import React from 'react';
 import styles from '@/styles/home-components/AnimateCard.module.scss';
 import AnimatedLink from '@/components/links/animatedLink';
 
-
 interface AnimateCardProps {
   id: number;
   title: string;

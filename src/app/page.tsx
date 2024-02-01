@@ -17,7 +17,7 @@ export default function Index() {
           className={styles.links_list_container}
          
         >
-          {LinksHomeData.map((link) => (
+          {/* {LinksHomeData.map((link) => (
             <AnimateCard
               id={link.id}
               key={link.id}
@@ -26,7 +26,7 @@ export default function Index() {
               image={link.image}
               url={link.url}
             />
-          ))}
+          ))} */}
         </div>
       </div>
     </main>
