@@ -1,0 +1,43 @@
+.chatbot_container {
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+  }
+  
+  .chatbot {
+    font-size: 4rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .messageBubble {
+    position: absolute;
+    right: 5rem; /* Ajusta según necesites para posicionar correctamente el globo */
+    top: 0;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+  /*   visibility: hidden; */
+    opacity: 0;
+    /* transition: opacity 0.5s, visibility 0s linear 0.5s; */
+    display: flex;
+/*     width: auto; */
+    height: 100%;
+  }
+
+  .message{
+    font-size: 1rem;
+  }
+  
+  /* @keyframes fadeInOut {
+    0%, 100% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    10%, 90% {
+      visibility: visible;
+      opacity: 1;
+    }
+  } */
+  

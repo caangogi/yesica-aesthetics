@@ -17,6 +17,7 @@ const AnimateCard: React.FC<AnimateCardProps> = ({ id, title, description, image
       <div className={styles.link_card_container}
         style={{
           backgroundImage:`url(${image})`,
+          viewTransitionName: `image-${id}`
         }}
       >
         <div 

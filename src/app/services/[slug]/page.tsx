@@ -58,6 +58,7 @@ return (
       className={styles.service_page} 
       style={{ 
         backgroundImage: `url(${itemData?.image})`,
+        viewTransitionName: `image-${itemData?.id}`
       }}
       initial={{ y: 20, opacity:0}}
       animate={{ y:0, opacity: 1}}
@@ -66,9 +67,9 @@ return (
     >
       <motion.div 
         className={styles.text_container}
-        initial={{ x: 40, opacity:0}}
-        animate={{ x:0, opacity: 1}}
-        transition={{ease: 'easeInOut', duration: 0.5}}
+        initial={{ y: -40, opacity:0}}
+        animate={{ y:0, opacity: 1}}
+        transition={{ease: 'easeInOut', duration: 0.75}}
       >
         <h1 className={styles.title}>{itemData?.title}</h1>
         <p className={styles.description}>{itemData?.description}</p>
