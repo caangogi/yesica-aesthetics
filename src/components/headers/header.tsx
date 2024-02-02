@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '@/styles/header.module.scss'
-import Logo from '@/assets/images/logo.jpg'
+import Logo from '@/assets/images/logo_whithout_bg.png'
 import Image from 'next/image'
 import AnimatedLink from '../links/animatedLink'
 import ChatBot from '@/components/svg/ChatBot'

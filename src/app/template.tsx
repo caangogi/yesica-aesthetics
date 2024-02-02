@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { LinksHomeData } from '@/data/LinksHomeData';
 import AnimateCard from '@/components/home-components/AnimateCard';
 import { useParams } from 'next/navigation';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 interface AnimateCardProps {
     id: number;
@@ -19,37 +20,32 @@ export default function Template({
 }: {
     children: React.ReactNode,
 }) {
-    // Estado para almacenar los datos filtrados y mezclados
+    
     const [linksHomeData, setLinksHomeData] = useState<AnimateCardProps[]>([]);
-
     const params = useParams<{ slug: string  }>();
 
-    console.log(params.slug)
-
     useEffect(() => {
-        // Función para filtrar y mezclar los datos
         const mixLinksHomeData = () => {
             let links: AnimateCardProps[] = LinksHomeData.filter((item) => !item.url.includes(params.slug));
-
             for (let i = links.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                [links[i], links[j]] = [links[j], links[i]]; // Intercambia elementos
+                [links[i], links[j]] = [links[j], links[i]]; 
             }
-
-            setLinksHomeData(links); // Actualiza el estado con los datos mezclados
+            setLinksHomeData(links); 
         };
 
         mixLinksHomeData();
-    }, [params.slug]); // Este efecto se ejecutará cada vez que el parámetro 'tag' cambie
+    }, [params.slug]); 
 
-    console.log(linksHomeData)
+
 
     return (
         <div>
             {children}
+           
             <div className={styles.service_page_main_container}>
                 <div className={styles.service_page_links_container}>
-                {linksHomeData.map((link) => (
+                    {linksHomeData.map((link) => (
                     <AnimateCard
                         key={link.id}
                         id={link.id}
@@ -58,8 +54,9 @@ export default function Template({
                         description={link.description}
                         url={link.url}
                     />
-                ))}
+                    ))}
                 </div>
+               
             </div>
         </div>
     );

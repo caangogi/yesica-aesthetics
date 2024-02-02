@@ -1,14 +1,15 @@
 .chatbot_container {
     position: relative;
-    height: 5rem;
-    width: 5rem;
+    height: 3rem;
+    width: 3rem;
   }
   
   .chatbot {
-    font-size: 4rem;
+    font-size: 3rem;
     position: relative;
     display: flex;
     align-items: center;
+    color: #201009;
   }
   
   .messageBubble {

@@ -1,12 +1,8 @@
 'use client'
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'; 
 import styles from '@/styles/services-page.module.scss';
 import Header from '@/components/headers/header';
 import { LinksHomeData } from '@/data/LinksHomeData';
-import AnimateCard from '@/components/home-components/AnimateCard';
-import { Parallax } from 'react-parallax'; 
-
 import { motion } from 'framer-motion';
 
 interface AnimateCardProps {
@@ -34,9 +30,9 @@ export default function ServicePage({
     filteredData = LinksHomeData.filter((item) => item.url.includes(params.slug));
     setItemData(filteredData[0])
   };
+
   const linksHomeData = () => {
     let links = LinksHomeData.filter((item) => !item.url.includes(params.slug));
-  
     for (let i = links.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [links[i], links[j]] = [links[j], links[i]]; 
@@ -63,32 +59,19 @@ return (
       initial={{ y: 20, opacity:0}}
       animate={{ y:0, opacity: 1}}
       transition={{ease: 'easeInOut', duration: 0.75}}
-
     >
       <motion.div 
         className={styles.text_container}
         initial={{ y: -40, opacity:0}}
         animate={{ y:0, opacity: 1}}
-        transition={{ease: 'easeInOut', duration: 0.75}}
+        transition={{ease: 'easeInOut', duration: 1.25}}
       >
         <h1 className={styles.title}>{itemData?.title}</h1>
         <p className={styles.description}>{itemData?.description}</p>
+     {/*    <Link href={`/pages/${itemData?.url}`}>
+          <h1>{`Ver más ===>`} </h1>
+        </Link> */}
       </motion.div>
-
-    {/*   <div className={styles.service_page_main_container}>
-        <div className={styles.service_page_links_container}>
-          {linksHomeData?.map((link) => (
-            <AnimateCard
-              key={link.id}
-              id={link.id}
-              image={link.image}
-              title={link.title}
-              description={link.description}
-              url={link.url}
-            />
-          ))}
-        </div>
-      </div> */}
     </motion.div>
 
     

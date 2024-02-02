@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '@/styles/home-components/AnimateCard.module.scss';
-/* import AnimatedLink from '@/components/links/animatedLink'; */
 import Link from 'next/link';
 
 interface AnimateCardProps {

@@ -1,23 +1,16 @@
 .header{
     height: 100px;
-    background-color: #fff;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
     position: fixed;
     padding-bottom: .2rem;
-    background-image: linear-gradient(
-        90deg,
-        #f5d167,
-        #cf9f4e,
-        #fdf1ae,
-        #cf9f4e,
-        #a47c3d
-      );
+    backdrop-filter: blur(7px);
+    background-image: linear-gradient(45deg, rgba(203, 179, 106, 0.28), rgba(207, 160, 78, 0.165), rgba(253, 241, 174, 0.204), rgba(207, 160, 78, 0.318), rgba(164, 124, 61, 0.26));
       background-size: 200% 200%;
       transition: background-position .5s linear; 
-      
       &:hover {
         background-position: 100% 100%; 
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -28,7 +21,6 @@
 
 .header_container{
     width: 100%;
-    background-color: #fff;
     height: 100%;
     display: flex;
     justify-content: space-between;
