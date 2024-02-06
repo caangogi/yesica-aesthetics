@@ -16,7 +16,7 @@ interface AnimateCardProps {
   url: string;
 }
 
-function ServicePage({
+export default function ServicePage({
   params,
   searchParams,
 }: {
@@ -52,20 +52,18 @@ function ServicePage({
 return (
   <>
   <main className={styles.main}>
-    <motion.div 
+    <div 
       className={styles.service_page} 
       style={{ 
         backgroundImage: `url(${itemData?.image})`,
+        viewTransitionName: `image-${itemData?.id}`
       }}
-      initial={{ y: 20, opacity:0}}
-      animate={{ y:0, opacity: 1}}
-      transition={{ease: 'easeInOut', duration: 0.75}}
     >
-      <motion.div 
+      <div 
         className={styles.text_container}
-        initial={{ x: 40, opacity:0}}
-        animate={{ x:0, opacity: 1}}
-        transition={{ease: 'easeInOut', duration: .5}}
+        style={{
+          viewTransitionName: `text-container-${itemData?.id}`
+        }}
       >
         <h1 className={styles.title}>{itemData?.title}</h1>
         <p className={styles.description}>{itemData?.description}</p>
@@ -75,18 +73,11 @@ return (
         >
           <span className={styles.principal_button_text}>Más información</span>
         </Link>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
 
     
   </main>
   </>
 );
 }
-
-
-const ServicePageWithLayout = (props: { params: { slug: string; }; searchParams: { [key: string]: string | string[] | undefined; }; }) => {
-  return <ServicePageLayout><ServicePage {...props} /></ServicePageLayout>;
-};
-
-export default ServicePageWithLayout;

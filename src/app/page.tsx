@@ -9,17 +9,6 @@ function HomePage() : React.ReactNode{
   return (
     <main 
       className={`${styles.main}  ${styles.home}`}  >
-      <Header />
-
-    {/*   <div 
-        className={`${styles.main_container}`}
-      >
-        <div 
-          className={styles.links_list_container}
-         
-        >
-        </div>
-      </div> */}
     </main>
   );
 }
