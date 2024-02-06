@@ -3,6 +3,10 @@
     background-color: #fff;
     position: relative;
     transition: background-image 0.5s ease;
+
+    &::-webkit-scrollbar {
+      display: none;
+  }
 }
 
 .service_page{
@@ -11,6 +15,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+}
 }
 
 .service_page_main_container{

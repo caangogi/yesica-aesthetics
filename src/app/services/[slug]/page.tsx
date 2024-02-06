@@ -50,6 +50,8 @@ export default function ServicePage({
   
   const [itemData, setItemData] = useState<AnimateCardProps | null>(null);
   const [isComponentVisible, setIsComponentVisible] = useState(false);
+
+
   useEffect(() => {
     const fetchItem = async () => {
       let filteredData = LinksHomeData;
@@ -60,18 +62,18 @@ export default function ServicePage({
   }, [params.slug]);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsComponentVisible(true);
-      } 
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-}, []);
+      const handleScroll = () => {
+        if (window.scrollY < 10) {
+          setIsComponentVisible(true);
+        } 
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+  }, []);
 
-  const DetailComponent = getComponentForSlug(params.slug);
+const DetailComponent = getComponentForSlug(params.slug);
 
 return (
   <>
@@ -82,8 +84,8 @@ return (
             key="detailComponent"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.5 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 0.75 }}
           >
             {DetailComponent && <DetailComponent />}
           </motion.div>
@@ -96,7 +98,7 @@ return (
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 50 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.75 }}
               style={{ 
                 backgroundImage: `url(${itemData?.image})`,
                 viewTransitionName: `image-${itemData?.id}`
@@ -114,7 +116,7 @@ return (
                   className={styles.principal_button}
                   onClick={() => setIsComponentVisible(!isComponentVisible)}
                 >
-                  <span className={styles.principal_button_text}>Más información</span>
+                  <span className={styles.principal_button_text}>Reservar hora</span>
                 </button>
               </div>
             </motion.div>

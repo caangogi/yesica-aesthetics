@@ -14,8 +14,8 @@ export default function Header() {
           >
               <Image 
                   src={Logo}
-                  height={90}
-                  width={90}
+                  height={70}
+                  width={70}
                   alt='Yesica Giraldo Aesthetics Logo'
               />
           </AnimatedLink>

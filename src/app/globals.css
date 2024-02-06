@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -12,13 +12,17 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-h1{
-  font-family: 'Poor Story', system-ui;
+h1, h2{
+  font-family: 'Source Serif 4', serif;
 }
 
 

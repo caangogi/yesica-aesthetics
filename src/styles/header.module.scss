@@ -7,15 +7,15 @@
     width: 100%;
     position: fixed;
     padding-bottom: .2rem;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
     background-image: linear-gradient(
-      45deg,
-      #cbb36a85,
-      #cfa04e7e,
-      #fdf1ae80,
-      #cfa04e8c,
-      #a47c3d85
-    );
+        45deg,
+        #cbb36a6b,
+        #cfa04e5e,
+        #fdee975e,
+        #f1b95773,
+        #a47c3d6c
+      );  
     background-size: 200% 200%;
     transition: background-position .5s linear; 
     &:hover {

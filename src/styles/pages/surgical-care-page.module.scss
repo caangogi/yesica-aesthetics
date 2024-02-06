@@ -1,0 +1,95 @@
+.surgical_care_page{
+    padding-top: 100px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.section {
+    min-height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+  
+.section1 {
+    width: 90vw;
+    height: 100%;
+}
+
+.section1_content{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+    height: 100%;
+}
+
+.text_container{
+    width: 70%;
+    text-align: left;
+}
+
+.title_page{
+    font-size: 3.3rem;
+    color: #201009;
+}
+
+.section2 {
+    grid-template-columns: 1fr 2fr;
+    background-color: #fde6ee; 
+}
+
+.section3 {
+    grid-template-rows: 1fr 2fr 1fr;
+    background-color: #000; 
+}
+
+.section4 {
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #ffb6c1; 
+}
+
+.section5 {
+grid-template-areas: 
+    "content content aside"
+    "footer footer footer";
+    background-color: #dda0dd; 
+}
+
+
+.content, .aside, .footer {
+    padding: 20px;
+}
+
+.content {
+    grid-area: content;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+@media only screen and (max-width: 901px){
+        .section1{
+            width: 100vw;
+        }
+
+        .text_container{
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .title_page{
+            font-size: 2rem;
+        }
+}
