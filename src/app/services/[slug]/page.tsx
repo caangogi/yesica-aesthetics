@@ -85,7 +85,7 @@ return (
 }
 
 
-const ServicePageWithLayout = (props: React.JSX.IntrinsicAttributes & { params: { slug: string; }; searchParams: { [key: string]: string | string[] | undefined; }; }) => {
+const ServicePageWithLayout = (props: { params: { slug: string; }; searchParams: { [key: string]: string | string[] | undefined; }; }) => {
   return <ServicePageLayout><ServicePage {...props} /></ServicePageLayout>;
 };
 
