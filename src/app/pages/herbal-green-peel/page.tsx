@@ -16,7 +16,7 @@ interface AnimateCardProps {
   url: string;
 }
 
-function ServicePage({
+function HerbaGreenPeelPage({
   params,
   searchParams,
 }: {
@@ -52,6 +52,7 @@ function ServicePage({
 return (
   <>
   <main className={styles.main}>
+    <Header />
     <motion.div 
       className={styles.service_page} 
       style={{ 
@@ -69,12 +70,9 @@ return (
       >
         <h1 className={styles.title}>{itemData?.title}</h1>
         <p className={styles.description}>{itemData?.description}</p>
-        <Link
-          className={styles.principal_button}
-          href={`/pages/${itemData?.url}`}
-        >
-          <span className={styles.principal_button_text}>Más información</span>
-        </Link>
+          <Link
+            href={`/pages/${itemData?.url}`}
+          >Ver más</Link>
       </motion.div>
     </motion.div>
 
@@ -85,8 +83,6 @@ return (
 }
 
 
-const ServicePageWithLayout = (props: React.JSX.IntrinsicAttributes & { params: { slug: string; }; searchParams: { [key: string]: string | string[] | undefined; }; }) => {
-  return <ServicePageLayout><ServicePage {...props} /></ServicePageLayout>;
-};
 
-export default ServicePageWithLayout;
+
+export default HerbaGreenPeelPage;

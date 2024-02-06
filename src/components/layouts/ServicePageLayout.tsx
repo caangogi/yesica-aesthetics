@@ -15,7 +15,7 @@ interface AnimateCardProps {
     url: string;
   }
 
-export default function Template({
+export default function ServicePageLayout({
     children,
 }: {
     children: React.ReactNode,
@@ -37,12 +37,9 @@ export default function Template({
         mixLinksHomeData();
     }, [params.slug]); 
 
-
-
     return (
         <div>
             {children}
-           
             <div className={styles.service_page_main_container}>
                 <div className={styles.service_page_links_container}>
                     {linksHomeData.map((link) => (
@@ -52,7 +49,7 @@ export default function Template({
                         image={link.image}
                         title={link.title}
                         description={link.description}
-                        url={link.url}
+                        url={`/services/${link.url}`}
                     />
                     ))}
                 </div>
