@@ -61,60 +61,66 @@ export default function ServicePage({
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsComponentVisible(true); 
-      console.log('hello scroll')
+      if (window.scrollY > 10) {
+        setIsComponentVisible(true);
+      } 
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll); 
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+}, []);
 
-  
   const DetailComponent = getComponentForSlug(params.slug);
 
 return (
   <>
   <main className={styles.main}>
-
     <AnimatePresence>
       {isComponentVisible ? (
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 50 }}
-          transition={{ duration: 0.5 }}
-        >
-          {DetailComponent && <DetailComponent />}
-        </motion.div>
-      ) : 
-      
-        <div 
-          className={styles.service_page} 
-          style={{ 
-            backgroundImage: `url(${itemData?.image})`,
-            viewTransitionName: `image-${itemData?.id}`
-          }}
-        >
-          <div 
-            className={styles.text_container}
-            style={{
-              viewTransitionName: `text-container-${itemData?.id}`
-            }}
+          <motion.div
+            key="detailComponent"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
           >
-            <h1 className={styles.title}>{itemData?.title}</h1>
-            <p className={styles.description}>{itemData?.description}</p>
-            <button
-              className={styles.principal_button}
-              onClick={() => setIsComponentVisible(!isComponentVisible)}
+            {DetailComponent && <DetailComponent />}
+          </motion.div>
+   
+      ) : (
+         
+            <motion.div 
+              key="servicePage"
+              className={styles.service_page} 
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+              style={{ 
+                backgroundImage: `url(${itemData?.image})`,
+                viewTransitionName: `image-${itemData?.id}`
+              }}
             >
-              <span className={styles.principal_button_text}>Más información</span>
-            </button>
-          </div>
-        </div>
+              <div 
+                className={styles.text_container}
+                style={{
+                  viewTransitionName: `text-container-${itemData?.id}`
+                }}
+              >
+                <h1 className={styles.title}>{itemData?.title}</h1>
+                <p className={styles.description}>{itemData?.description}</p>
+                <button
+                  className={styles.principal_button}
+                  onClick={() => setIsComponentVisible(!isComponentVisible)}
+                >
+                  <span className={styles.principal_button_text}>Más información</span>
+                </button>
+              </div>
+            </motion.div>
+        )
       }
-    </AnimatePresence>
-    
+      </AnimatePresence>
   </main>
   </>
 );
