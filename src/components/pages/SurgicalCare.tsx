@@ -38,6 +38,7 @@ export default function SurgicalCareDetails() {
       <Section className={`${styles.section} ${styles.section1}`}>
         
         <div className={styles.section1_content}>
+          
           <div className={styles.text_container}>
             <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía: Sesión Única de LDM para un Cuidado Postquirúrgico Superior</h2>
           </div>
