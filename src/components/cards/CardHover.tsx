@@ -20,9 +20,9 @@ function CardHover() {
   }, []);
 
   const isMobile = useMediaQuery('(max-width: 901px)');
-  console.log(isMobile)
+
   const top_variants = {
-    open: {  y: "-120%" },
+    open: {  y: "-100%" },
     closed: { y: 0 },
   }
   const bottom_variants = {
@@ -34,19 +34,18 @@ function CardHover() {
     closed: { y: "50%" },
   }
 
-  console.log(scrollPosition >= 200)
-
   return (
     <motion.div
       className={styles.card_hover}
-      animate={scrollPosition >= 0.07 * window.innerHeight ? 'hover' : 'initial'}
     >
-      <div
+      <motion.div
         key={'top'}
         className={styles.card_hover__content}
-       /*  variants={top_variants}
+        whileHover={{top: 0}}
+        
+        variants={top_variants}
         animate={scrollPosition >= 200 && isMobile ? "open" : "closed"}
-        transition={{ duration: 0.3 }} */
+        transition={{ duration: 0.3 }}
       >
         <h2 className={styles.card_hover__title}>
           Make your <span>choice</span> right now!
@@ -56,28 +55,26 @@ function CardHover() {
           quisquam doloremque nostrum laboriosam, blanditiis libero corporis
           nulla a aut?
         </p>
-        <div 
-          /*   href="card_container"  */
+        <motion.div 
             className={styles.card_hover__link}
-           /*  
             variants={link_variants}
             animate={scrollPosition >= 200 && isMobile ? "open" : "closed"}
-            transition={{ duration: 0.3 }} */
+            transition={{ duration: 0.6 }}
         >
           <h3>Reservar </h3>
-        </div>
-      </div>
-      <div
+        </motion.div>
+      </motion.div>
+      <motion.div
         key={'bottom'}
         className={styles.card_hover__extra}
-       /*  variants={bottom_variants}
+        variants={bottom_variants}
         animate={scrollPosition >= 200 && isMobile ? "open" : "closed"}
-        transition={{ duration: 0.3 }} */
+        transition={{ duration: 0.6 }}
       >
         <h3>
           Learn <span>now</span> and get <span>40%</span> discount!
         </h3>
-      </div>
+      </motion.div>
       <Image
         width={1000}
         height={1000}
