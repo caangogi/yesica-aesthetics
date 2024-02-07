@@ -85,7 +85,7 @@ return (
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -100 }}
-            transition={{ duration: 0.75 }}
+            transition={{ duration: 0.5 }}
           >
             {DetailComponent && <DetailComponent />}
           </motion.div>

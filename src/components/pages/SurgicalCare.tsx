@@ -13,7 +13,7 @@ const Section: React.FC<SectionProps> = ({ children, className }) => {
 
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.5,
   });
 
   return (
@@ -36,8 +36,6 @@ export default function SurgicalCareDetails() {
   return (
     <div className={styles.surgical_care_page}>
       <Section className={`${styles.section} ${styles.section1}`}>
-        
-        
       <div className={styles.section1_content}>
         <div className={styles.text_container}>
           <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía: Sesión Única de LDM para un Cuidado Postquirúrgico Superior</h2>

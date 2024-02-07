@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useMediaQuery } from '@react-hook/media-query';
 import styles from '@/styles/card-hover.module.scss';
 
 function CardHover() {
   const [scrollPosition, setScrollPosition] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
       const currentPosition = window.scrollY;
@@ -19,14 +19,34 @@ function CardHover() {
     };
   }, []);
 
+  const isMobile = useMediaQuery('(max-width: 901px)');
+  console.log(isMobile)
+  const top_variants = {
+    open: {  y: "-120%" },
+    closed: { y: 0 },
+  }
+  const bottom_variants = {
+    open: {  y: "-0%" },
+    closed: { y: "100%" },
+  }
+  const link_variants = {
+    open: {  y: "-0%" },
+    closed: { y: "50%" },
+  }
+
+  console.log(scrollPosition >= 200)
+
   return (
     <motion.div
       className={styles.card_hover}
       animate={scrollPosition >= 0.07 * window.innerHeight ? 'hover' : 'initial'}
     >
-      <motion.div
+      <div
+        key={'top'}
         className={styles.card_hover__content}
-        animate={scrollPosition >= 0.07 * window.innerHeight ? 'hover' : 'initial'}
+       /*  variants={top_variants}
+        animate={scrollPosition >= 200 && isMobile ? "open" : "closed"}
+        transition={{ duration: 0.3 }} */
       >
         <h2 className={styles.card_hover__title}>
           Make your <span>choice</span> right now!
@@ -36,22 +56,32 @@ function CardHover() {
           quisquam doloremque nostrum laboriosam, blanditiis libero corporis
           nulla a aut?
         </p>
-        <a href="#card_container" className={styles.card_hover__link}>
+        <div 
+          /*   href="card_container"  */
+            className={styles.card_hover__link}
+           /*  
+            variants={link_variants}
+            animate={scrollPosition >= 200 && isMobile ? "open" : "closed"}
+            transition={{ duration: 0.3 }} */
+        >
           <h3>Reservar </h3>
-        </a>
-      </motion.div>
-      <motion.div
+        </div>
+      </div>
+      <div
+        key={'bottom'}
         className={styles.card_hover__extra}
-        animate={scrollPosition >= 0.07 * window.innerHeight ? 'hover' : 'initial'}
+       /*  variants={bottom_variants}
+        animate={scrollPosition >= 200 && isMobile ? "open" : "closed"}
+        transition={{ duration: 0.3 }} */
       >
         <h3>
           Learn <span>now</span> and get <span>40%</span> discount!
         </h3>
-      </motion.div>
+      </div>
       <Image
         width={1000}
         height={1000}
-        src="/images/link-cards/01.png"
+        src="/images/link-cards/03.png"
         alt="card hover alt "
       />
     </motion.div>
