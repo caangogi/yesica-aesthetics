@@ -37,15 +37,15 @@ export default function SurgicalCareDetails() {
     <div className={styles.surgical_care_page}>
       <Section className={`${styles.section} ${styles.section1}`}>
         
-        <div className={styles.section1_content}>
-          
-          <div className={styles.text_container}>
-            <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía: Sesión Única de LDM para un Cuidado Postquirúrgico Superior</h2>
-          </div>
-          <div className={styles.cards_container}>
-            <CardHover/>
-          </div>
+        
+      <div className={styles.section1_content}>
+        <div className={styles.text_container}>
+          <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía: Sesión Única de LDM para un Cuidado Postquirúrgico Superior</h2>
         </div>
+        <div id='card_container' className={styles.cards_container}>
+          <CardHover/>
+        </div>
+      </div>
 
       </Section>
 
