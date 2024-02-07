@@ -8,9 +8,9 @@ function CardHover() {
   return (
     <div className={styles.card_hover}>
         <div className={styles.card_hover__content}>
-        <h3 className={styles.card_hover__title}>
+        <h2 className={styles.card_hover__title}>
             Make your <span>choice</span> right now!
-        </h3>
+        </h2>
         <p className={styles.card_hover__text}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?</p>
         <a href="#" className={styles.card_hover__link}>
             <span>Learn How</span>
@@ -20,10 +20,9 @@ function CardHover() {
         </a>
         </div>
         <div className={styles.card_hover__extra}>
-        <h4>Learn <span>now</span> and get <span>40%</span> discount!</h4>
+            <h3>Learn <span>now</span> and get <span>40%</span> discount!</h3>
         </div>
         <Image 
-
             width={1000}
             height={1000}
             src="/images/link-cards/01.png" alt="card hover alt "

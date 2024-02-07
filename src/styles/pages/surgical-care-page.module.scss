@@ -1,5 +1,5 @@
 .surgical_care_page{
-    padding-top: 100px;
+    padding-top: 20vh;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -81,6 +81,10 @@ grid-template-areas:
 
 
 @media only screen and (max-width: 901px){
+
+    .surgical_care_pag{
+        padding-top: 25vh;
+    }
         .section1{
             width: 100vw;
         }
@@ -93,4 +97,6 @@ grid-template-areas:
         .title_page{
             font-size: 2rem;
         }
+
+
 }
