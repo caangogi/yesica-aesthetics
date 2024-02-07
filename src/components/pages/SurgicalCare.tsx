@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '@/styles/pages/surgical-care-page.module.scss';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import CardHover from '../cards/CardHover';
 
 interface SectionProps {
   children: React.ReactNode; 
@@ -35,9 +36,16 @@ export default function SurgicalCareDetails() {
   return (
     <div className={styles.surgical_care_page}>
       <Section className={`${styles.section} ${styles.section1}`}>
-        <div className={styles.text_container}>
-          <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía: Sesión Única de LDM para un Cuidado Postquirúrgico Superior</h2>
+        
+        <div className={styles.section1_content}>
+          <div className={styles.text_container}>
+            <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía: Sesión Única de LDM para un Cuidado Postquirúrgico Superior</h2>
+          </div>
+          <div className={styles.cards_container}>
+            <CardHover/>
+          </div>
         </div>
+
       </Section>
 
       <Section className={`${styles.section} ${styles.section2}`}>
