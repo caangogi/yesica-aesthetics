@@ -10,6 +10,7 @@ import AntiWrinkle from '@/components/pages/AntiWrinkle';
 import HerbaGreenPeel from '@/components/pages/HerbaGreenPeel';
 import IvDrip from '@/components/pages/IvDrip';
 import BodyTreatments from '@/components/pages/BodyTreatments';
+import { useRouter } from 'next/navigation'
 
 interface AnimateCardProps {
   id: number;
@@ -19,7 +20,7 @@ interface AnimateCardProps {
   url: string;
 }
 
-function getComponentForSlug(slug: string) {
+/* function getComponentForSlug(slug: string) {
   switch (slug) {
     case 'surgical-care':
       return SurgicalCareDetails;
@@ -39,7 +40,7 @@ function getComponentForSlug(slug: string) {
       return null; 
   }
 }
-
+ */
 export default function ServicePage({
   params,
   searchParams,
@@ -49,8 +50,7 @@ export default function ServicePage({
 }) {
   
   const [itemData, setItemData] = useState<AnimateCardProps | null>(null);
-  const [isComponentVisible, setIsComponentVisible] = useState(false);
-
+  const router = useRouter();
 
   useEffect(() => {
     const fetchItem = async () => {
@@ -62,9 +62,9 @@ export default function ServicePage({
   }, [params.slug]);
 
   useEffect(() => {
-      const handleScroll = () => {
-        if (window.scrollY < 10) {
-          setIsComponentVisible(true);
+    const handleScroll = () => {
+        if (window.scrollY < 15) {
+            router.push(`/pages/${params.slug}`)
         } 
       };
       window.addEventListener('scroll', handleScroll);
@@ -73,13 +73,12 @@ export default function ServicePage({
       };
   }, []);
 
-const DetailComponent = getComponentForSlug(params.slug);
 
 return (
   <>
   <main className={styles.main}>
     <AnimatePresence>
-      {isComponentVisible ? (
+     {/*  {isComponentVisible ? (
           <motion.div
             key="detailComponent"
             initial={{ opacity: 0, y: 50 }}
@@ -90,7 +89,7 @@ return (
             {DetailComponent && <DetailComponent />}
           </motion.div>
    
-      ) : (
+      ) : ( */}
          
             <motion.div 
               key="servicePage"
@@ -114,14 +113,15 @@ return (
                 <p className={styles.description}>{itemData?.description}</p>
                 <button
                   className={styles.principal_button}
-                  onClick={() => setIsComponentVisible(!isComponentVisible)}
+                  onClick={() => router.push(`/pages/${params.slug}`)
+                }
                 >
                   <span className={styles.principal_button_text}>Reservar hora</span>
                 </button>
               </div>
             </motion.div>
-        )
-      }
+     {/*    )
+      } */}
       </AnimatePresence>
   </main>
   </>

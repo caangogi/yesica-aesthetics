@@ -14,9 +14,9 @@ export default function AnimatedLink({ href, children, className }: Props) {
     <Link
       href={`${href}`}
       className={className}
-      onClick={() => {
+    /*   onClick={() => {
         animatedRoute(href);
-      }}
+      }} */
       
       passHref
       

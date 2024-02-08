@@ -11,9 +11,7 @@ function CardHover() {
       const currentPosition = window.scrollY;
       setScrollPosition(currentPosition);
     };
-
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -37,15 +35,19 @@ function CardHover() {
   return (
     <motion.div
       className={styles.card_hover}
+      style={{ 
+        backgroundImage: `url(/images/link-cards/01.png)`,
+        viewTransitionName: `image-01`
+      }}
     >
       <motion.div
         key={'top'}
         className={styles.card_hover__content}
-        whileHover={{top: 0}}
+      /*   whileHover={{top: 0}} */
         
-        variants={top_variants}
+       /*  variants={top_variants}
         animate={scrollPosition >= 200 && isMobile ? "open" : "closed"}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.3 }} */
       >
         <h2 className={styles.card_hover__title}>
           Make your <span>choice</span> right now!
@@ -57,9 +59,9 @@ function CardHover() {
         </p>
         <motion.div 
             className={styles.card_hover__link}
-            variants={link_variants}
+           /*  variants={link_variants}
             animate={scrollPosition >= 200 && isMobile ? "open" : "closed"}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6 }} */
         >
           <h3>Reservar </h3>
         </motion.div>
@@ -67,20 +69,22 @@ function CardHover() {
       <motion.div
         key={'bottom'}
         className={styles.card_hover__extra}
+        /* 
         variants={bottom_variants}
         animate={scrollPosition >= 200 && isMobile ? "open" : "closed"}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 0.6 }} */
       >
         <h3>
           Learn <span>now</span> and get <span>40%</span> discount!
         </h3>
       </motion.div>
-      <Image
+     {/*  <Image
         width={1000}
         height={1000}
         src="/images/link-cards/03.png"
-        alt="card hover alt "
-      />
+        alt="card hover alt"
+
+      /> */}
     </motion.div>
   );
 }

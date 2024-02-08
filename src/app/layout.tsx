@@ -1,7 +1,10 @@
+
+import { Suspense } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/headers/header'
+import { AnimatedNavigationEvents } from '@/hooks/AnimatedNavigationEvents'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +26,9 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <Suspense fallback={null}>
+          <AnimatedNavigationEvents />
+        </Suspense>
       </body>
     </html>
   )
