@@ -36,9 +36,13 @@ function CardHover() {
     <motion.div
       className={styles.card_hover}
       style={{ 
-        backgroundImage: `url(/images/link-cards/01.png)`,
+        backgroundImage: `url(/images/link-cards/05.png)`,
         viewTransitionName: `image-01`
       }}
+      /* style={{
+        backgroundImage:`url(${image})`,
+        viewTransitionName: `image-${id}`
+      }} */
     >
       <motion.div
         key={'top'}

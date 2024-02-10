@@ -1,0 +1,27 @@
+.page{
+    background-image: url('/images/link-cards/07.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* .page {
+    position: relative;
+    width: 100%;
+  }
+
+.background_video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  } */
+
+@media only screen and (max-width: 901px){
+    .page{
+        background-size: cover;
+        height: 100vh;
+        background-position-x: -50vw ;
+    }
+}

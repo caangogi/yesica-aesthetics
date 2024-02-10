@@ -6,6 +6,7 @@
     overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-x: -10vw;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     border-radius: 7px;
     transition: all 0.35s;
@@ -41,11 +42,6 @@
           box-shadow: .5px .5px 1px rgba(0,0,0,0.3);
         }
       }
-  
-     /*  img {
-        transform: scale(1);
-        transition: 0.35s 0.1s transform cubic-bezier(.1,.72,.4,.97);
-      } */
     }
   
     &__content {
@@ -124,7 +120,8 @@
       width: 100%;
       font-size: 2rem;
       text-align: center;
-      background-color: #e41e49;
+      backdrop-filter: blur(7px);
+      background-color: #e41e498e;
       padding: 1rem;
       bottom: 0;
       z-index: 0;
@@ -145,20 +142,7 @@
           #fdf1ae,
           #cf9f4e,
           #a47c3d
-  );
+      );
       }
     }
-  
-   /*  img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      z-index: -1;
-      transform: scale(1.2);
-      transition: 0.35s 0.35s transform cubic-bezier(.1,.72,.4,.97);
-    } */
   }
