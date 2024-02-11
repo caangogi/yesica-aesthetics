@@ -20,7 +20,7 @@ interface AnimateCardProps {
   url: string;
 }
 
-/* function getComponentForSlug(slug: string) {
+function getComponentForSlug(slug: string) {
   switch (slug) {
     case 'surgical-care':
       return SurgicalCareDetails;
@@ -40,7 +40,7 @@ interface AnimateCardProps {
       return null; 
   }
 }
- */
+
 export default function ServicePage({
   params,
   searchParams,
@@ -61,7 +61,7 @@ export default function ServicePage({
     fetchItem();
   }, [params.slug]);
 
-  useEffect(() => {
+/*   useEffect(() => {
     const handleScroll = () => {
         if (window.scrollY < 15) {
             router.push(`/pages/${params.slug}`)
@@ -71,14 +71,18 @@ export default function ServicePage({
       return () => {
         window.removeEventListener('scroll', handleScroll);
       };
-  }, []);
+  }, []); */
 
 
 return (
   <>
   <main className={styles.main}>
-    <AnimatePresence>
-     {/*  {isComponentVisible ? (
+
+  <SurgicalCareDetails /* itemData={itemData} *//>
+
+
+    {/* <AnimatePresence>
+      {isComponentVisible ? (
           <motion.div
             key="detailComponent"
             initial={{ opacity: 0, y: 50 }}
@@ -89,7 +93,7 @@ return (
             {DetailComponent && <DetailComponent />}
           </motion.div>
    
-      ) : ( */}
+      ) : (
          
             <motion.div 
               key="servicePage"
@@ -120,9 +124,12 @@ return (
                 </button>
               </div>
             </motion.div>
-     {/*    )
-      } */}
-      </AnimatePresence>
+        )
+      }
+      </AnimatePresence> */}
+
+
+
   </main>
   </>
 );

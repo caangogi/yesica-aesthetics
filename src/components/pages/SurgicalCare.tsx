@@ -9,6 +9,16 @@ interface SectionProps {
   className?: string; 
 }
 
+
+interface AnimateCardProps {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+}
+
+
 const Section: React.FC<SectionProps> = ({ children, className }) => {
 
   const { ref, inView } = useInView({
@@ -34,14 +44,18 @@ const Section: React.FC<SectionProps> = ({ children, className }) => {
   );
 };
 
-export default function SurgicalCareDetails() {
+export default function SurgicalCareDetails(/* {itemData: AnimateCardProps} */) {
+
+  
+
   return (
     <div className={styles.surgical_care_page}>
       <Section className={`${styles.section} ${styles.section1}`}>
       <div className={styles.section1_content}>
 
         <div className={styles.text_container}>
-          <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía con una <span>sesión única de LDM para un Cuidado Postquirúrgico Superior</span></h2>
+          <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía </h2>
+          <p className={styles.sub_title_page}>Sesión única de LDM para un Cuidado Postquirúrgico Superior</p>
         </div>
 
         <div id='card_container' className={styles.cards_container}>
