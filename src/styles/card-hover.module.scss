@@ -33,7 +33,7 @@
   
         &__link {
           opacity: 1;
-          transform: translate(-52%, 0);
+          transform: translate(-50%, 50%);
           transition: all 0.3s 0.35s cubic-bezier(.1,.72,.4,.97);
           backdrop-filter: blur(10px);
           background-color: #e41e498e;
@@ -50,6 +50,7 @@
       background-color: #e41e498e;
       height: 50%;
       position: absolute;
+      padding: 1rem;
       bottom: 0;
       left: 0;
       transform: translateY(0);
