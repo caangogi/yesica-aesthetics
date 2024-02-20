@@ -26,6 +26,15 @@ h1, h2, h3, h4{
 }
 
 
+.bpw-floating-button{
+  float: left !important;
+}
+
+#bp-web-widget{
+  z-index: 10000 !important;
+}
+
+
 @media only screen and (max-width: 901px){
  
 }

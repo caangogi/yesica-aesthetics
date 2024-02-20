@@ -1,5 +1,6 @@
 
 import { Suspense } from 'react'
+import Script from 'next/script';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -18,9 +19,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  
+
+
+
   return (
     <html lang="en">
+      <head>
+
+     
+      </head>
+      <Script src="https://cdn.botpress.cloud/webchat/v1/inject.js" />
+      <Script src="https://mediafiles.botpress.cloud/496f1cac-a67b-43ad-af67-2da649f0ffd0/webchat/config.js" defer />
       <body className={inter.className}>
         <Header />
         <main>

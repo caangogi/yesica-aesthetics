@@ -1,9 +1,11 @@
+'use client'
 import React from 'react'
 import styles from '@/styles/header.module.scss'
 import Logo from '@/assets/images/logo_whithout_bg.png'
 import Image from 'next/image'
 import AnimatedLink from '../links/animatedLink'
 import ChatBot from '@/components/svg/ChatBot'
+import HeaderChatBot from '../chat-bot/header-chat-bot'
 
 export default function Header() {
   return (
@@ -19,7 +21,7 @@ export default function Header() {
                   alt='Yesica Giraldo Aesthetics Logo'
               />
           </AnimatedLink>
-          <ChatBot />
+          <HeaderChatBot />
        </div>
     </div>
   )
