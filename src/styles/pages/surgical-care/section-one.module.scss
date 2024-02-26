@@ -318,6 +318,13 @@
     .item_01{
         flex: auto;
         order: 2;
+
+        & .item_01_inside_01{
+            background-repeat: no-repeat;
+            background-size: 200%;
+            background-position-x: center;
+            background-position-y: center;
+        }
     }
     .item_02{
         flex: auto;
@@ -334,7 +341,11 @@
 
 
     .hc_image_container{
-        background-position-x: calc(-50vw);
+        background-position-x: calc(-85vw);
+    }
+
+    .horizontal_card_sec{
+        height: 50vh;
     }
 }
 
