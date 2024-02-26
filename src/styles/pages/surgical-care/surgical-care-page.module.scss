@@ -59,13 +59,17 @@
 }
 
 .section2 {
-    grid-template-columns: 1fr 2fr;
-    background-color: #fde6ee; 
+    background-color: #fff; 
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section3 {
     grid-template-rows: 1fr 2fr 1fr;
-    background-color: #000; 
+   /*  background-color: #000;  */
 }
 
 .section4 {

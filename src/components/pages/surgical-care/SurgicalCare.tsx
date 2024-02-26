@@ -1,8 +1,9 @@
 import React from 'react';
-import styles from '@/styles/pages/surgical-care-page.module.scss';
+import styles from '@/styles/pages/surgical-care/surgical-care-page.module.scss';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import CardHover from '../cards/CardHover';
+import CardHover from '@/components/cards/CardHover';
+import SectionOne from './sections/SectionOne'
 
 interface SectionProps {
   children: React.ReactNode; 
@@ -23,7 +24,7 @@ const Section: React.FC<SectionProps> = ({ children, className }) => {
 
   const { ref, inView } = useInView({
     triggerOnce: false,
-    threshold: 0.5,
+    threshold: 0.2,
   });
 
   return (
@@ -50,6 +51,7 @@ export default function SurgicalCareDetails(/* {itemData: AnimateCardProps} */) 
 
   return (
     <div className={styles.surgical_care_page}>
+
       <Section className={`${styles.section} ${styles.section1}`}>
       <div className={styles.section1_content}>
 
@@ -67,9 +69,10 @@ export default function SurgicalCareDetails(/* {itemData: AnimateCardProps} */) 
       </Section>
 
       <Section className={`${styles.section} ${styles.section2}`}>
-        <div className={styles.text_container}>
+        {/* <div className={styles.text_container}>
           <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía: Sesión Única de LDM para un Cuidado Postquirúrgico Superior</h2>
-        </div>
+        </div> */}
+        <SectionOne />
       </Section>
 
       <Section className={`${styles.section} ${styles.section3}`}>

@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import SurgicalCareDetails from '@/components/pages/SurgicalCare';
+import SurgicalCareDetails from '@/components/pages/surgical-care/SurgicalCare';
 import styles from '@/styles/pages/page.module.scss';
 
 export default function Page() {

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import styles from '@/styles/services-page.module.scss';
 import { AnimatePresence, motion } from 'framer-motion';
 import { LinksHomeData } from '@/data/LinksHomeData';
-import SurgicalCareDetails from '@/components/pages/SurgicalCare';
+import SurgicalCareDetails from '@/components/pages/surgical-care/SurgicalCare';
 import FacialTreatments from '@/components/pages/FacialTreatments';
 import DermaFillers from '@/components/pages/DermaFillers';
 import AntiWrinkle from '@/components/pages/AntiWrinkle';
