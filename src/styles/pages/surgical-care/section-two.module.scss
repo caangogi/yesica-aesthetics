@@ -68,16 +68,9 @@
         flex: auto;
     }
 
-   /*  .section_two_item_one, .section_two_item_two{
-        height: 100%;
-    } */
     
-    .section_two_item_one_inside_one, .section_two_item_two_inside_two{
-        height: 20vh;
-    }
-    
-    .section_two_item_one_inside_two, .section_two_item_two_inside_one{
-        height: 50vh;
+    .section_two_item_one_inside_two, .section_two_item_two_inside_one, .section_two_item_one_inside_one, .section_two_item_two_inside_two{
+        flex: 1;
     }
     
 
