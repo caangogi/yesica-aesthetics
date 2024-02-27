@@ -2,7 +2,10 @@ import React, { ReactNode } from 'react';
 import styles from '@/styles/pages/surgical-care/section-one.module.scss';
 import {motion} from 'framer-motion'
 import { useInView } from 'react-intersection-observer';
-
+import SmallCard from '@/components/cards/SmallCard';
+import MediumCard from '@/components/cards/MediumCard';
+import HorizontalCard from '@/components/cards/HorizontalCard';
+import HorizontalCardSecondary from '@/components/cards/HorizontalCardSecondary';
 interface GridContainerProps {
   children: ReactNode;
 }
@@ -30,64 +33,36 @@ const SectionOne = () => {
                     }}
                     transition={{ duration: 0.3, delay: 0.2  }}
                 >
+
                     <div className={styles.item_01_inside_01}>
-                        <div className={styles.small_card}>
-                            <div className={styles.sc_text_container}>
-                                <h2>
-                                    Local Dynamic Micromassage- 360 Liposuction | DRAINING FLUID
-                                </h2>
-                                <h3>£65 | 60 minutos</h3>
-                                <div className={styles.reserva_button_container}>
-                                    <button 
-                                        className={styles.reserva_button_secondary}
-                                        onClick={() => alert('Hello world"')}
-                                    >
-                                        <span>Reservar</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className={styles.sc_image_container}>
-
-                            </div>
-                        
-                        </div>
+                        <SmallCard 
+                            title='LDM - 360 Liposuction | DRAINING FLUID'
+                            price='£65 | 60 minutos'
+                            image='/images/pages/20.webp'
+                            onClick={() => alert('Hello button')}
+                        />
                     </div>
+
                     <div className={styles.item_01_inside_02}>
-                        <div className={styles.medium_card}>
-                            <h2>
-                                Local Dynamic Micromassage - 360 Liposuction + Arms Ir Thighs DRAINING FLUID
-                            </h2>
-                            <h3>£75 | 70 minutos</h3>
-                            <button 
-                                className={styles.reserva_button}
-                                onClick={() => alert('Hello world"')}
-                            >
-                                <span>Reservar</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div className={styles.item_01_inside_03}>
-                        <div className={styles.small_card}>
-                            <div className={styles.sc_text_container}>
-                                <h2>
-                                    Local Dynamic Micromassage- 360 Liposuction | DRAINING FLUID
-                                </h2>
-                                <h3>£65 | 60 minutos</h3>
-                                <div className={styles.reserva_button_container}>
-                                    <button 
-                                        className={styles.reserva_button_secondary}
-                                        onClick={() => alert('Hello world"')}
-                                    >
-                                        <span>Reservar</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className={styles.sc_image_container}>
 
-                            </div>
-                        </div>
+                        <MediumCard 
+                            title='Local Dynamic Micromassage - 360 Liposuction + Arms Ir Thighs DRAINING FLUID'
+                            price='£75 | 70 minutos'
+                            image='/images/pages/17.webp'
+                            onClick={() => alert('Hello Medium Card!')}
+                        />
+                    </div>
+
+                    <div className={styles.item_01_inside_03}>
+                        <SmallCard 
+                            title=' LDM - 360 Liposuction | NOT DRAINING FLUID'
+                            price='£70 | 70 minutos'
+                            image='/images/pages/24.jpg'
+                            onClick={() => alert('Hello button')}
+                        />
                     </div>
                 </motion.div>
+
                 <motion.div 
                     className={` ${styles.item} ${styles.item_02} `}
                     initial={{ opacity: 0} }
@@ -98,51 +73,36 @@ const SectionOne = () => {
 
                 >
                     <div className={styles.item_02_inside_01}>
-                        <div className={styles.horizontal_card}>
-                            <div className={styles.hc_container}>
-                                <div className={styles.hc_text_container}>
-                                    <h2>
-                                        Super Pack LDM - Tummy Tuck & Liposuction + Arms Or Thighs
-                                    </h2>
-                                    <p>
-                                    Optimiza tu proceso de recuperación con nuestro exclusivo Pack Promocional. Disfruta de una sesión diseñada para complementar tu cirugía. <br/><br/> ¡Reserva tu sesión hoy y da el primer paso hacia una recuperación más rápida y cómoda!
-                                    </p>
-                                    <h3>£85 | 90 minutos</h3>
-                                     <button 
-                                        className={styles.reserva_button}
-                                        onClick={() => alert('Hello world"')}
-                                    >
-                                        <span>Reservar</span>
-                                    </button>
-                                </div>
-                                <div className={styles.hc_image_container}>
 
-                                </div>
-                            </div>
+                        <HorizontalCard 
+                            title='Super Pack LDM - Tummy Tuck & Liposuction + Arms Or Thighs'
+                            description='Optimiza tu proceso de recuperación con nuestro exclusivo Pack Promocional. Disfruta de una sesión diseñada para complementar tu cirugía.  ¡Reserva tu sesión hoy y da el primer paso hacia una recuperación más rápida y cómoda!'
+                            price='£85 | 90 minutos'
+                            image='/images/pages/53.webp'
+                            onClick={() => alert('Hello horizontal card!')}
+                        />
 
-                            
-
-                        </div> 
                     </div>
 
                     <div className={styles.item_02_inside_02}>
                         
                     </div>
+
                     <div className={styles.item_02_inside_03}>
-                        <div className={styles.horizontal_card_sec}>
+                       {/*  <div className={styles.horizontal_card_sec}>
                             <div 
                                 className={styles.hc_card_sec_image_container}
                                 style={{
-                                    backgroundImage: 'url(/images/pages/52.webp)'
+                                    backgroundImage: 'url()'
                                 }}
                             >
 
                             </div>
                             <div className={styles.hc_card_sec_text_container}>
                                 <h2>
-                                    Pack Local Dynamic Micromassage - 360 Liposuction + Arms Ir Thighs DRAINING FLUID
+                                    
                                 </h2>
-                                <h3>£75 | 70 minutos</h3>
+                                <h3></h3>
                                 <button 
                                     className={styles.reserva_button}
                                     onClick={() => alert('Hello world"')}
@@ -150,10 +110,17 @@ const SectionOne = () => {
                                     <span>Reservar</span>
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
+                        <HorizontalCardSecondary 
+                            title='Pack Local Dynamic Micromassage - 360 Liposuction + Arms Ir Thighs DRAINING FLUID'
+                            price='£75 | 70 minutos'
+                            image='/images/pages/52.webp'
+                            onClick={() => alert('hello hcs!')}
+                        />
                     </div>
                     
                 </motion.div>
+
                 <motion.div 
                     className={` ${styles.item} ${styles.item_03} `}
                     initial={{ opacity: 0} }
@@ -164,60 +131,28 @@ const SectionOne = () => {
 
                 >
                     <div className={styles.item_03_inside_01}>
-                        <div className={styles.medium_card}>
-                            <h2>
-                                Local Dynamic Micromassage - 360 Liposuction + Arms Or Thighs DRAINING FLUID
-                            </h2>
-                            <h3>£75 | 70 minutos</h3>
-                            <button 
-                                className={styles.reserva_button}
-                                onClick={() => alert('Hello world"')}
-                            >
-                                <span>Reservar</span>
-                            </button>
-                        </div>
+                        <MediumCard 
+                            title='Local Dynamic Micromassage - 360 Liposuction + Arms Or Thighs DRAINING FLUID'
+                            price='£75 | 70 minutos' 
+                            image='/images/pages/03.webp'
+                            onClick={() => alert('Hello medium card!')}
+                        />
                     </div>
                     <div className={styles.item_03_inside_02}>
-                        <div className={styles.small_card}>
-                            <div className={styles.sc_text_container}>
-                                <h2>
-                                    Local Dynamic Micromassage- 360 Liposuction | DRAINING FLUID
-                                </h2>
-                                <h3>£65 | 60 minutos</h3>
-                                <div className={styles.reserva_button_container}>
-                                    <button 
-                                        className={styles.reserva_button_secondary}
-                                        onClick={() => alert('Hello world"')}
-                                    >
-                                        <span>Reservar</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className={styles.sc_image_container}>
-
-                            </div>
-                        </div>
+                        <SmallCard 
+                            title='Seroma Aspiration - Single Session'
+                            price='£55 | 30 minutos'
+                            image='/images/pages/21.webp'
+                            onClick={() => alert('Hello Button')}
+                        />
                     </div>
                     <div className={styles.item_03_inside_03}>
-                        <div className={styles.small_card}>
-                            <div className={styles.sc_text_container}>
-                                <h2>
-                                    Local Dynamic Micromassage- 360 Liposuction | DRAINING FLUID
-                                </h2>
-                                <h3>£65 | 60 minutos</h3>
-                                <div className={styles.reserva_button_container}>
-                                    <button 
-                                        className={styles.reserva_button_secondary}
-                                        onClick={() => alert('Hello world"')}
-                                    >
-                                        <span>Reservar</span>
-                                    </button>
-                                </div>
-                            </div>
-                            <div className={styles.sc_image_container}>
-
-                            </div>
-                        </div>
+                        <SmallCard 
+                            title='LDM - Tummy Tuck - Liposuction DRAINING FLUID'
+                            price='£85 | 90 minutos'
+                            image='/images/pages/33.webp'
+                            onClick={() => alert('Hello Button')}
+                        />
                     </div>
                 </motion.div>
             </div>

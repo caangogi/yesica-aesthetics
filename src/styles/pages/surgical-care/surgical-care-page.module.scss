@@ -8,6 +8,12 @@
     &::-webkit-scrollbar {
         display: none;
     }
+
+    & h2{
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to right, #f63d5d, #4d0419);
+    }
 }
 
 .section {
@@ -67,12 +73,12 @@
     align-items: center;
 }
 
-.section3 {
+/* .section3 {
     grid-template-rows: 1fr 2fr 1fr;
-   /*  background-color: #000;  */
-}
+  
+} */
 
-.section4 {
+/* .section4 {
     grid-template-columns: repeat(3, 1fr);
     background-color: #ffb6c1; 
 }
@@ -83,7 +89,7 @@ grid-template-areas:
     "footer footer footer";
     background-color: #dda0dd; 
 }
-
+ */
 
 .content, .aside, .footer {
     padding: 20px;

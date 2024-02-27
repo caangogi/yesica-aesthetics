@@ -1,0 +1,92 @@
+// CardHoverSecondary.module.scss
+.card_hover_secondary {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative; 
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    padding: var(--padding);
+}
+
+.card_hover_secondary_title{
+    color: var(--black-primary-color);
+    font-weight: 900;
+    font-size: var(--small-card-h2);
+    flex: 2;
+    display: flex;
+    align-items: center;
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.card_hover_secondary:hover .card_hover_secondary_services_container{
+    height: 100%; 
+    display: flex;
+
+}
+.card_hover_secondary:hover .card_hover_secondary_text_container{
+    height: 100%; 
+}
+
+.card_hover_secondary_text_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    position: absolute; 
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    transition: height 0.3s ease; 
+    height: 20%;
+    background-color: var(--back-ground-transparent);
+    backdrop-filter: blur(7px);
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+}
+
+.card_hover_secondary_services_container{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: height 0.3s ease; 
+    flex: 10;
+
+}
+
+.card_hover_secondary_services_list{
+    padding: 1rem;
+    list-style: none;
+
+    & li{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    & .card_hover_secondary_service_item{
+        font-size: 1rem;
+        margin-top: .5rem;
+    }
+}
+
+.card_hover_secondary_footer{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card_hover_secondary_footer_text_container{
+    flex: 7;
+    & h4{
+        font-size: var(--small-card-h2);
+    }
+}
+.card_hover_secondary_footer_btn_container{
+    flex: 5;
+}
+
+
