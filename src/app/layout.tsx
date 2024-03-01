@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import Script from 'next/script';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css'
+import '@/styles/theme/globals.scss'
 import Header from '@/components/headers/header'
 import { AnimatedNavigationEvents } from '@/hooks/AnimatedNavigationEvents'
 

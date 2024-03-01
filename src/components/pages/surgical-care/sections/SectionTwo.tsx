@@ -16,10 +16,10 @@ const SectionOne = () => {
        <div className={styles.section_two_content}>
 
             <div className={styles.section_two_text_container}>
-                <h2>
+                <h2 className={styles.page_subtitle}>
                     Paquetes Integrales de Contorno Corporal
                 </h2>
-                <p>
+                <p className={styles.page_description}>
                     Descubre nuestros cuidadosamente diseñados Paquetes Integrales de Contorno Corporal, diseñados para proporcionar soluciones personalizadas para tus objetivos estéticos. Cada paquete combina técnicas avanzadas de cuidado quirúrgico con sesiones de masaje de drenaje linfático para obtener resultados óptimos. <br/><br/> Ya sea que estés apuntando a depósitos de grasa localizados o buscando una transformación corporal total, nuestros paquetes ofrecen un enfoque holístico para esculpir y rejuvenecer tu cuerpo. Elige el paquete que mejor se adapte a tus necesidades y emprende un viaje para realzar tu belleza natural con confianza.
                 </p>
             </div>

@@ -31,10 +31,15 @@ const CardHoverSecondary: React.FC<CardHoverSecondaryProps> = ({ title, included
                     </div>
                     <div className={styles.card_hover_secondary_footer}>
                         <div className={styles.card_hover_secondary_footer_text_container}>
-                            <h4>Total Duration: {durationService} minutes </h4>
-                            <h4>Package Price: £{packagePrice}</h4>
+                            <h4>Total Duration: 
+                                {durationService} minutes 
+                            </h4>
+                            <h4>
+                                Package Price: 
+                                £{packagePrice}
+                            </h4>
                         </div>
-                        <div>
+                       
                         <div className={styles.card_hover_secondary_footer_btn_container}>
 
                             <CardsButton
@@ -44,7 +49,7 @@ const CardHoverSecondary: React.FC<CardHoverSecondaryProps> = ({ title, included
                                 <h3>Reservar</h3>
                             </CardsButton>
                         </div>
-                        </div>
+                       
                     </div>
                    
                 </div>

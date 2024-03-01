@@ -1,3 +1,20 @@
+@import '../../theme/Default.module.scss';
+@import '../../theme/Utils.module.scss';
+
+.page_subtitle{
+    @extend %title-lg;
+    @extend %text-gradient-primary;
+}
+
+.page_description{
+    font-size: var(--title-size-sm);
+    @include isMobile{
+        font-size: var(--title-size-xsm);
+        margin: .5rem 0;
+    }
+}
+
+
 .section_one{
     display: flex;
     flex-direction: column;
@@ -18,15 +35,6 @@
     text-align: left;
     padding: 40px;
     width: 70vw;
-
-    & h2{
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
-
-    & p{
-        font-size: 1.2rem;
-    }
 }
 
 .section_one_container {
@@ -114,17 +122,13 @@
 
 
 @media only screen and (max-width: 901px){
+
+    
+  
     .section_one_text_container{
         width: 100%;
         padding: .5rem;
-
-        & h2{
-            font-size: 2rem;
-        }
-
-        & p{
-            font-size: 1rem;
-        }
+     
     } 
 
     .section_one_container{

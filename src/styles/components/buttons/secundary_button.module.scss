@@ -1,8 +1,10 @@
+@import "../../theme/Default.module.scss";
+@import "../../theme/Utils.module.scss";
 
 .button__secondary {
-    border: 1px solid var(--primary-color);
     background-color: transparent;
-    border-radius: .2rem;
+    border: 1px solid var(--color-primary);
+    border-radius: .3rem;
     cursor: pointer;
     padding: .2rem;
     font-size: var(--small-card-h3);
@@ -16,24 +18,23 @@
 }
 
 .button__secondary:hover{
-    background-color: #fff;
-    -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text;
-    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    @extend %text-gradient-primary; 
 }
 
 .button__primary{
     border: none;
-    border-radius: .2rem;
+    border-radius: .3rem;
     color: #fff;
     cursor: pointer;
-    background-color: var(--primary-color);
+    background-color: var(--color-primary);
     padding: var(--padding);
-    font-size: var(--small-card-h3);
+    font-size: var( --title-size-sm);
     transition: all .3s;
+    border: 1px solid var(--color-primary);
+    width: 100%;
 }
 
 .button__primary:hover{
-    background-color: var(--primary-button-color-hover);
-    
+    background-color: var(--color-surface-rgb);
+    @extend %text-gradient-primary; 
 }

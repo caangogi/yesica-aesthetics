@@ -1,3 +1,5 @@
+@import "../../theme/Default.module.scss";
+@import "../../theme/Utils.module.scss";
 
 .horizontal_card_sec {
     display: flex;
@@ -20,18 +22,17 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: var(--padding);
+    padding: .3rem;
 }
 
 .horizontal_card_title{
-    font-size: var(--medium-card-h2);
-    -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text;
-    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    @extend %text-gradient-primary;
 }
 
 .horizontal_card_price{
-    font-size: var(--medium-card-h3);
+    @extend %text-gradient-black;
+    font-size: var(--title-size-md);
+
 }
 
 @media only screen and (max-width: 901px){
@@ -47,8 +48,4 @@
         flex: 7;
     } 
 
-    .horizontal_card_title{
-        font-size:var(--medium-card-h2) ;
-
-    }
 }

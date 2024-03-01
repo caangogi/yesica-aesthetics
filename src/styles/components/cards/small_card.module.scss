@@ -1,3 +1,6 @@
+@import "../../theme/Default.module.scss";
+@import "../../theme/Utils.module.scss";
+
 .small-card {
     display: flex;
     justify-content: space-between;
@@ -6,9 +9,9 @@
     border-radius: var(--border-radius);
 
     &__text-container {
-        background-color: var(--small-card-text-background-color);
+        @extend %text-container-blur;
         border-radius: 10px 0 0 10px;
-        padding: var(--padding);
+        padding: .3rem;
         height: 100%;
         flex: 7;
         display: flex;
@@ -16,14 +19,13 @@
         justify-content: space-between;
 
         &__title {
-            font-size: var(--small-card-h2);
-            -webkit-text-fill-color: transparent; 
-            -webkit-background-clip: text;
-            background-image: linear-gradient(to right, var(--primary-color), var(--secundary-color));
+        @extend %text-gradient-primary;
+            
         }
 
         &__price {
-            font-size: var(--small-card-h3);
+            font-size: var(--title-size-sm);
+            @extend %text-gradient-black;
         }
     }
 
@@ -38,6 +40,6 @@
 
 @media only screen and (max-width: 901px){
     .small-card{
-        height: 25vh;
+        height:auto;
     }
 }

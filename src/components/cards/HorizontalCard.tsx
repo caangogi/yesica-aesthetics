@@ -17,7 +17,7 @@ const HorizontalCard: React.FC<HorizontalCardProps> = ({ title, description, pri
             <div className={styles.hc_container}>
                 <div className={styles.hc_text_container}>
                     <h2 className={styles.horizontal_card_title}>{title}</h2>
-                    <p>{description}</p>
+                    <p className={styles.horizontal_card_description}>{description}</p>
                     <h3 className={styles.horizontal_card_price}>{price}</h3>
                     <CardsButton onClick={onClick} primary><h3>Reservar</h3></CardsButton>
                 </div>

@@ -1,3 +1,6 @@
+@import "../../theme/Default.module.scss";
+@import "../../theme/Utils.module.scss";
+
 .horizontal_card {
     height: 100%;
     border-radius: var(--border-radius);
@@ -15,19 +18,30 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    padding: var(--padding);
+    padding: .5rem;
     height: 100%;
 }
 
 .horizontal_card_title{
-    font-size: var(--medium-card-h2);
-    -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text;
-    background-image: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    @extend %text-gradient-primary;
+    @extend %title-lg;
+
+    @include isMobile{
+        font-size: var(--title-size-md);
+    }
+}
+
+.horizontal_card_description{
+    font-size: var(--title-size-xsm);
+
+    @include isMobile{
+        font-size: var(--title-size-xs);
+    }
 }
 
 .horizontal_card_price{
-    font-size: var(--medium-card-h3);
+    font-size: var(--title-size-md);
+    @extend %text-gradient-black;
 }
 
 .hc_image_container {
@@ -41,7 +55,4 @@
 }
 
 @media only screen and (max-width: 901px){
-    .horizontal_card_title{
-        font-size:var(--medium-card-h2) ;
-    }
 }

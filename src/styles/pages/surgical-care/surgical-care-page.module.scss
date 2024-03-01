@@ -1,3 +1,6 @@
+@import "../../theme/Default.module.scss";
+@import "../../theme/Utils.module.scss";
+
 .surgical_care_page{
     padding-top: 20vh;
     backdrop-filter: blur(7px);
@@ -7,12 +10,6 @@
     align-items: center;
     &::-webkit-scrollbar {
         display: none;
-    }
-
-    & h2{
-        -webkit-text-fill-color: transparent; 
-        -webkit-background-clip: text;
-        background-image: linear-gradient(to right, #f63d5d, #4d0419);
     }
 }
 
@@ -45,17 +42,21 @@
 }
 
 .title_page{
-    font-weight: 900;
-    font-size: 3.3rem;
-    -webkit-text-fill-color: transparent; 
-    -webkit-background-clip: text;
-    background-image: linear-gradient(to right, #f63d5d, #4d0419);
+    @extend %title-xl;
+    @extend %text-gradient-primary;
+
+    @include isMobile{
+        font-size: var(--title-size);
+    }
+    
 }
 
 .sub_title_page{
-    color: #201009;
-    font-size: 2.25rem;
-    margin: 1rem 0;
+   @extend %title-lg;
+
+   @include isMobile{
+        font-size: var(--title-size-md);
+   }
 }
 
 .cards_container{
@@ -72,24 +73,6 @@
     justify-content: center;
     align-items: center;
 }
-
-/* .section3 {
-    grid-template-rows: 1fr 2fr 1fr;
-  
-} */
-
-/* .section4 {
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #ffb6c1; 
-}
-
-.section5 {
-grid-template-areas: 
-    "content content aside"
-    "footer footer footer";
-    background-color: #dda0dd; 
-}
- */
 
 .content, .aside, .footer {
     padding: 20px;
@@ -121,14 +104,4 @@ grid-template-areas:
             width: 100%;
             padding: 1rem;
         }
-
-        .title_page{
-            font-size: 2rem;
-        }
-
-        .sub_title_page{
-            font-size: 1.25rem;
-        }
-
-
 }

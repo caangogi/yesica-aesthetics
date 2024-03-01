@@ -1,16 +1,25 @@
+@import "../../theme/Default.module.scss";
+@import "../../theme/Utils.module.scss";
+
 .section_two{
     display: block;
     padding: 40px;
+}
 
-    & h2{
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-    }
+.page_subtitle{
+    @extend %title-lg;
+    @extend %text-gradient-primary;
+}
 
-    & p{
-        font-size: 1.2rem;
+.page_description{
+    font-size: var(--title-size-sm);
+    @include isMobile{
+        font-size: var(--title-size-xsm);
+        margin: .5rem 0;
     }
 }
+
+
 
 .section_two_content{
     display: flex;
@@ -54,7 +63,6 @@
 @media only screen and (max-width: 901px){
     .section_two{
         padding: var(--padding);
-
     }
     .section_two_content{
         flex-direction: column;

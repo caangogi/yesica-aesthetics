@@ -17,10 +17,10 @@ const SectionOne = () => {
     <section className={styles.section_one}>
        <div className={styles.section_one_content}>
             <div className={styles.section_one_text_container}>
-            <h2>
+            <h2 className={styles.page_subtitle}>
                 Recupera tu bienestar con cuidado especializado.
             </h2>
-            <p>
+            <p className={styles.page_description}>
                 Experimenta la transformación con nuestras sesiones únicas de LDM diseñadas para el cuidado postquirúrgico superior. Nuestro equipo de expertos está dedicado a proporcionarte el mejor cuidado para una recuperación adecuada después de cualquier procedimiento. Descubre cómo nuestro enfoque personalizado puede ayudarte a obtener resultados excepcionales.
             </p>
             </div>
