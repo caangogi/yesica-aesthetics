@@ -1,0 +1,47 @@
+@import '../../theme/Default.module.scss';
+@import '../../theme/Utils.module.scss';
+
+.page_subtitle{
+    @extend %title-lg;
+    @extend %text-gradient-primary;
+}
+
+.page_description{
+    font-size: var(--title-size-sm);
+    @include isMobile{
+        font-size: var(--title-size-xsm);
+        margin: .5rem 0;
+    }
+}
+
+.section_four{
+    background-color: black;
+}
+
+.section_four_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.section_four_cards_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: fit-content;
+    padding: 40px;
+
+}
+
+.section_four_text_container{
+    text-align: center;
+    width: 80vw;
+    @include isMobile{
+        width: 100vw;
+        padding: .3rem;
+    }
+}

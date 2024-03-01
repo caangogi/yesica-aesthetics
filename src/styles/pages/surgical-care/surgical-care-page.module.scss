@@ -44,7 +44,6 @@
 .title_page{
     @extend %title-xl;
     @extend %text-gradient-primary;
-
     @include isMobile{
         font-size: var(--title-size);
     }
@@ -53,7 +52,6 @@
 
 .sub_title_page{
    @extend %title-lg;
-
    @include isMobile{
         font-size: var(--title-size-md);
    }

@@ -5,6 +5,8 @@ import { useInView } from 'react-intersection-observer';
 import CardHover from '@/components/cards/CardHover';
 import SectionOne from './sections/SectionOne'
 import SectionTwo from './sections/SectionTwo'
+import SectionThree from './sections/SectionThree';
+import SectionFour from './sections/SectionFour';
 
 interface SectionProps {
   children: React.ReactNode; 
@@ -77,17 +79,13 @@ export default function SurgicalCareDetails(/* {itemData: AnimateCardProps} */) 
       </Section>
       
       <Section className={`${styles.section} ${styles.section4}`}>
-        <div className={styles.text_container}>
-          <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía: Sesión Única de LDM para un Cuidado Postquirúrgico Superior</h2>
-        </div>
+        <SectionThree />
       </Section>
-{/* 
+
 
       <Section className={`${styles.section} ${styles.section5}`}>
-        <div className={styles.text_container}>
-          <h2 className={styles.title_page}>Dale el mejor cuidado a tu cuerpo después de la cirugía: Sesión Única de LDM para un Cuidado Postquirúrgico Superior</h2>
-        </div>
-      </Section> */}
+        <SectionFour />
+      </Section>
     </div>
   );
 }
