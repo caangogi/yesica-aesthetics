@@ -4,7 +4,16 @@ import Image from 'next/image';
 import { useMediaQuery } from '@react-hook/media-query';
 import styles from '@/styles/card-hover.module.scss';
 
-function CardHover() {
+interface CardHover {
+  title: string;
+  description: string;
+  discount: string;
+  packagePrice: number;
+  backgroundImage: string;
+}
+
+
+const CardHover: React.FC<CardHover> = ({title, description, discount, backgroundImage, packagePrice}) =>{
   const [scrollPosition, setScrollPosition] = useState(0);
   useEffect(() => {
     const handleScroll = () => {
@@ -36,7 +45,7 @@ function CardHover() {
     <motion.div
       className={styles.card_hover}
       style={{ 
-        backgroundImage: `url(/images/link-cards/04.png)`,
+        backgroundImage: `url(${backgroundImage})`,
         viewTransitionName: `image-01`
       }}
       /* style={{
@@ -54,13 +63,14 @@ function CardHover() {
         transition={{ duration: 0.3 }} */
       >
         <h2 className={styles.card_hover__title}>
-          Make your <span>choice</span> right now!
+          {/* Make your <span>choice</span> right now! */}
+          {title}
+          <br/>
+          <span>£{packagePrice}</span>
         </h2>
-        <p className={styles.card_hover__text}>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
-          quisquam doloremque nostrum laboriosam, blanditiis libero corporis
-          nulla a aut?
-        </p>
+      {/*   <p className={styles.card_hover__text}>
+          {description}
+        </p> */}
         <motion.div 
             className={styles.card_hover__link}
            /*  variants={link_variants}
@@ -79,7 +89,7 @@ function CardHover() {
         transition={{ duration: 0.6 }} */
       >
         <h3>
-          Learn <span>now</span> and get <span>40%</span> discount!
+          Learn <span>now</span> and get <span>{discount}%</span> discount!
         </h3>
       </motion.div>
      {/*  <Image

@@ -4,6 +4,7 @@
 .page_subtitle{
     @extend %title-lg;
     @extend %text-gradient-primary;
+    margin-bottom: .3rem;
 }
 
 .page_description{
@@ -15,7 +16,10 @@
 }
 
 .section_four{
-    background-color: black;
+    padding-top: 4rem;
+    @include isMobile{
+        padding-top: 1rem;
+    }
 }
 
 .section_four_content{

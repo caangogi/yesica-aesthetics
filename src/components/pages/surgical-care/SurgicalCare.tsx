@@ -1,56 +1,13 @@
 import React from 'react';
 import styles from '@/styles/pages/surgical-care/surgical-care-page.module.scss';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { Section } from '@/components/sections/PageSection';
 import CardHover from '@/components/cards/CardHover';
 import SectionOne from './sections/SectionOne'
 import SectionTwo from './sections/SectionTwo'
 import SectionThree from './sections/SectionThree';
 import SectionFour from './sections/SectionFour';
 
-interface SectionProps {
-  children: React.ReactNode; 
-  className?: string; 
-}
-
-
-interface AnimateCardProps {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  url: string;
-}
-
-
-const Section: React.FC<SectionProps> = ({ children, className }) => {
-
-  const { ref, inView } = useInView({
-    triggerOnce: false,
-    threshold: 0.2,
-  });
-
-  return (
-    <motion.div
-      ref={ref}
-      className={className}
-      initial={{ opacity: 0, y: -100 }} 
-      animate={{
-        opacity: inView ? 1 : 0,
-        y: inView ? '-10vh' : '0'
-      }}
-      transition={{ duration: 0.5, delay: 0.2  }}
-    >
-     
-     {children} 
- 
-    </motion.div>
-  );
-};
-
 export default function SurgicalCareDetails(/* {itemData: AnimateCardProps} */) {
-
-  
 
   return (
     <div className={styles.surgical_care_page}>
@@ -64,7 +21,13 @@ export default function SurgicalCareDetails(/* {itemData: AnimateCardProps} */) 
           </div>
 
           <div id='card_container' className={styles.cards_container}>
-            <CardHover/>
+            <CardHover 
+              title='Surgical Care LDM/ Packcage of 10'
+              description='Oferta en LMD, Ahorra hasta un 15% en todos los paquetes de más de 10 sesiones.'
+              backgroundImage='/images/pages/47.webp'
+              discount='14'
+              packagePrice={550}
+            />
           </div>
 
         </div>

@@ -4,10 +4,17 @@
 .page_subtitle{
     @extend %title-xl;
     @extend %text-gradient-primary;
-
     @include isMobile{
         font-size: var(--title-size);
     }
+}
+
+.section_three{
+    background: var(--gradient-secundary);
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+
 }
 
 .section_three_content{

@@ -49,7 +49,7 @@ export default function ServicePageLayout({
                         image={link.image}
                         title={link.title}
                         description={link.description}
-                        url={`/pages/${link.url}`}
+                        url={`/services/${link.url}`}
                     />
                     ))}
                 </div>

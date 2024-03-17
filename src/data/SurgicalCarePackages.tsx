@@ -1,0 +1,51 @@
+export const SurgicalCarePackages = [
+    {
+        id: 1,
+        title:'Surgical Care LDM | 10 Sessions',
+        description:'Oferta en LMD, Ahorra hasta un 15% en todos los paquetes de más de 10 sesiones.',
+        backgroundImage:'/images/pages/70.webp',
+        discount:'14',
+        packagePrice:550,
+    },
+    {
+        id: 2,
+        title:'LDM - 360 Liposuction + Arms/Thighs | 10 Sessions ',
+        description:'Oferta enLDM - 360 Liposuction + Arms/Thighs, Ahorra hasta un 15% en todos los paquetes de más de 10 sesiones.',
+        backgroundImage:'/images/pages/48.webp',
+        discount:'14',
+        packagePrice:650,
+    },
+    {
+        id: 3,
+        title:'LDM - Tummy Tuck & Liposuction | 10 Sessions',
+        description:'Oferta en LMD, Ahorra hasta un 15% en todos los paquetes de más de 10 sesiones.',
+        backgroundImage:'/images/pages/49.webp',
+        discount:'14',
+        packagePrice:650,
+    },
+    {
+        id: 4,
+        title:'Seroma Aspiration | 10 Sessions',
+        description:'Oferta en LMD, Ahorra hasta un 15% en todos los paquetes de más de 10 sesiones.',
+        backgroundImage:'/images/pages/66.webp',
+        discount:'14',
+        packagePrice:350,
+    },
+    {
+        id: 5,
+        title:'Surgical Care LDM/ Packcage of 10',
+        description:'Oferta en LMD, Ahorra hasta un 15% en todos los paquetes de más de 10 sesiones.',
+        backgroundImage:'/images/pages/51.webp',
+        discount:'10',
+        packagePrice:550,
+    },
+    {
+        id: 6,
+        title:'Surgical Care LDM/ Packcage of 10',
+        description:'Oferta en LMD, Ahorra hasta un 15% en todos los paquetes de más de 10 sesiones.',
+        backgroundImage:'/images/pages/52.webp',
+        discount:'14',
+        packagePrice:550,
+    },
+    
+];

@@ -3,7 +3,8 @@
     background-color: #fff;
     position: relative;
     transition: background-image 0.5s ease;
-
+    background-size: cover;
+    background-position: center center;
     &::-webkit-scrollbar {
       display: none;
   }
@@ -15,6 +16,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  background-image: url('/images/pages/02.webp');
 
   &::-webkit-scrollbar {
     display: none;

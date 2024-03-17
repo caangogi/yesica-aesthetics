@@ -1,3 +1,7 @@
+@import './theme/Default.module.scss';
+@import './theme/Utils.module.scss';
+
+
 .card_hover {
     $root: &;
     width: 360px;
@@ -6,7 +10,8 @@
     overflow: hidden;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position-x: -10vw;
+    background-position-x:center;
+    background-position-x: center;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     border-radius: 7px;
     transition: all 0.35s;
@@ -25,7 +30,7 @@
   
         &__content {
           backdrop-filter: blur(7px);
-          background-color: #e41e498e;
+          background-color: var(--color-primary-transparent);
           bottom: 100%;
           transform: translateY(100%);
           transition: all 0.35s cubic-bezier(.1,.72,.4,.97);
@@ -36,7 +41,7 @@
           transform: translate(-50%, 50%);
           transition: all 0.3s 0.35s cubic-bezier(.1,.72,.4,.97);
           backdrop-filter: blur(10px);
-          background-color: #e41e498e;
+          background-color: var(--color-primary-transparent);
           border-radius: 7px;
           box-shadow: .5px .5px 1px rgba(0,0,0,0.3);
         }
@@ -47,7 +52,7 @@
       width: 100%;
       text-align: center;
       backdrop-filter: blur(7px);
-      background-color: #e41e498e;
+      background-color: var(--color-primary-transparent);
       height: 50%;
       position: absolute;
       padding: 1rem;
@@ -60,7 +65,7 @@
   
       & h2{
         font-size: 2rem;
-
+        color: var(--color-dark-primary);
         & span{
         
             color: #fff;

@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 import styles from '@/styles/pages/surgical-care/section-four.module.scss';
+import {SurgicalCarePackages} from '@/data/SurgicalCarePackages'
 import CardHover from '@/components/cards/CardHover';
+
 interface GridContainerProps {
   children: ReactNode;
 }
@@ -20,12 +22,16 @@ const SectionFour = () => {
               </p>
           </div>
           <div className={styles.section_four_cards_container}>
-              <CardHover />
-              <CardHover />
-              <CardHover />
-              <CardHover />
-              <CardHover />
-              <CardHover />
+              {SurgicalCarePackages.map((item) => 
+                <CardHover 
+                  key={item.id}
+                  title={item.title} 
+                  description={item.description}
+                  backgroundImage={item.backgroundImage}
+                  discount={item.discount}
+                  packagePrice={item.packagePrice}
+                />
+              )}
           </div>
        </div>
     </section>
